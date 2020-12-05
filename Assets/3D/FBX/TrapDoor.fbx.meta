@@ -9,7 +9,17 @@ ModelImporter:
   - first:
       74: -3914092972848291595
     second: TrapDoorClose
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LedMat
+    second: {fileID: 2100000, guid: b19cd3bf88a480049b9622b429a33153, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodTileMat
+    second: {fileID: 2100000, guid: 3b5db84f2f968914292fdde7bff5c446, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1
@@ -70,8 +80,8 @@ ModelImporter:
       name: TrapDoorClose
       takeName: Take 001
       internalID: 0
-      firstFrame: 25
-      lastFrame: 40
+      firstFrame: 85
+      lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
