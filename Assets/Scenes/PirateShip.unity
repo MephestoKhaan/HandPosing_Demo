@@ -359,9 +359,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7735849, g: 0.5489321, b: 0.25178, a: 1}
+  m_Color: {r: 0.8018868, g: 0.6867912, b: 0.5333304, a: 1}
   m_Intensity: 1.57
-  m_Range: 1.75
+  m_Range: 3.12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1125,7 +1125,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.7735849, g: 0.5489321, b: 0.25178, a: 1}
   m_Intensity: 1.57
-  m_Range: 1.75
+  m_Range: 3.12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1659,9 +1659,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7735849, g: 0.5489321, b: 0.25178, a: 1}
+  m_Color: {r: 0.77254903, g: 0.41534796, b: 0.25098038, a: 1}
   m_Intensity: 1.57
-  m_Range: 1.75
+  m_Range: 3.12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3281,9 +3281,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7735849, g: 0.5489321, b: 0.25178, a: 1}
+  m_Color: {r: 0.9056604, g: 0.7762517, b: 0.49982202, a: 1}
   m_Intensity: 1.57
-  m_Range: 1.75
+  m_Range: 3.12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
