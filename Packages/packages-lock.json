@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.mefistofiles.handposing": {
+      "version": "https://github.com/MephestoKhaan/HandPosing.git#develop",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "1402ff2fdb1d06ddb8d37759998386d5277e0f48"
+    },
     "com.unity.collab-proxy": {
       "version": "1.2.16",
       "depth": 0,
