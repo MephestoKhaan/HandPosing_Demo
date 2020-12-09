@@ -5,19 +5,18 @@ static class JenkinsUnityAppend
 	
 	public static readonly string APP_ID_RELEASE = "com.mefistofiles.handposing_techdemo";
 
-
-	private static void AppendAndroidRelease()
+	private static void BuildAndroidRelease()
 	{
-		AppendAndroid(
+		BuildAndroid(
 			keystoreName: GetArg("-keystore"),
 			keystorepass: GetArg("-keystorepass"),
 			keyaliasName: GetArg("-keyalias"),
-			keyaliasPass: GetArg("-keyaliasPass"),
+			keyaliasPass: GetArg("-keyaliaspass"),
 			buildNumber: GetArg("-buildnumber"),
-			name: GetArg("-apkName"));
+			name: GetArg("-apkname"));
 	}
 
-	private static void AppendAndroid(string buildNumber,
+	private static void BuildAndroid(string buildNumber,
 		string keystoreName,
 		string keystorepass,
 		string keyaliasName,
