@@ -3,7 +3,12 @@ guid: ab4e33618208fc749b24e83a008b5a79
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SideTableMat
+    second: {fileID: 2100000, guid: 35c861894e639e24b99d58cb0fffd5d3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1
@@ -45,7 +50,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

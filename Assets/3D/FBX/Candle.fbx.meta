@@ -3,7 +3,17 @@ guid: 71ed961401bceaa499dbe4f609e48700
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CandleFlameMat
+    second: {fileID: 2100000, guid: 03501be6920623a47b5bdb04360329f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CandleWaxMat
+    second: {fileID: 2100000, guid: 3490ff5661028354a8906d2cddaae493, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1
@@ -45,7 +55,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1

@@ -3,7 +3,12 @@ guid: 200d82559720db94cbf6e7358729df1d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChestMat
+    second: {fileID: 2100000, guid: 9a7a6c0fcbde8bd408b5c5adaaa8700f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1
@@ -45,7 +50,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
