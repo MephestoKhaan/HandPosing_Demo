@@ -5,8 +5,13 @@
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
         _Bump ("Bump", 2D) = "white" {}
         _BumpDetail ("Bump detail", 2D) = "white" {}
-        _Glossiness ("Smoothness", Range(0,1)) = 0.5
-        _Metallic ("Metallic", Range(0,1)) = 0.0
+        _Smoothness ("Smoothness", Range(0,1)) = 0.5
+        _Specular ("Specular", Color) = (0,0,0,0)
+        _MaxDistance ("Max Distance", float) = 200
+
+        
+        _WaveSpeed ("Wave speed", VECTOR) = (0,0,0,0)
+        _WaveHeight ("Wave height", float) = 2
     }
     SubShader
     {
@@ -14,8 +19,7 @@
         LOD 200
 
         CGPROGRAM
-        // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard fullforwardshadows
+        #pragma surface surf StandardSpecular vertex:vert fullforwardshadows
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
@@ -28,25 +32,47 @@
         {
             float2 uv_MainTex;
             float2 uv_BumpDetail;
+            float distanceFactor;
         };
 
-        half _Glossiness;
-        half _Metallic;
+        half4 _Specular;
+        half _Smoothness;
 
-        void surf (Input IN, inout SurfaceOutputStandard o)
+        half _MaxDistance;
+        half4 _WaveSpeed;
+        half _WaveHeight;
+
+        void vert (inout appdata_full v, out Input o) 
         {
-            fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
+            UNITY_INITIALIZE_OUTPUT(Input,o);
+            float distance = length(v.vertex.xz);
+            float distanceFactor = saturate(distance/_MaxDistance);
+
+            v.vertex.y += sin(_Time.z + distance*0.1) * distanceFactor * _WaveHeight;
+
+            o.distanceFactor = 1-distanceFactor;
+        }
+
+
+        void surf (Input IN, inout SurfaceOutputStandardSpecular o)
+        {
+            half2 displacement = IN.uv_MainTex;
+            displacement += _Time.x * _WaveSpeed.xy;
+
+            half2 displacementDetail = IN.uv_BumpDetail;
+            displacementDetail += _Time.x * _WaveSpeed.zw; 
+
+            fixed4 c = tex2D (_MainTex, displacement);
             o.Albedo = c.rgb;
             
-            fixed4 normal = tex2D (_Bump, IN.uv_MainTex);
-            fixed4 detailNormal = tex2D (_BumpDetail, IN.uv_BumpDetail);
+            fixed3 normal = UnpackNormal(tex2D (_Bump, displacement));
+            fixed3 detailNormal = UnpackNormal(tex2D (_BumpDetail, displacementDetail));
             o.Normal = BlendNormals(normal, detailNormal);
-
-            o.Metallic = _Metallic;
-            o.Smoothness = _Glossiness;
-            o.Alpha = c.a;
+            o.Specular = _Specular;
+            o.Smoothness = _Smoothness * IN.distanceFactor;
+            o.Alpha = 1;
         }
         ENDCG
     }
-    FallBack "Standard (Specular)"
+    FallBack "Diffuse"
 }
