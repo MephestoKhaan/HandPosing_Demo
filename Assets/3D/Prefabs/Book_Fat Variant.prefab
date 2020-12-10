@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &856962810898066811
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6468689799885073723}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.054158095, y: 0.17357095, z: 0.13441686}
+  m_Center: {x: -0.000000009313226, y: 0, z: 0.013107883}
 --- !u!1001 &6126037646635077738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65,7 +78,13 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e2f27c5e65a480c48b800004896a6301,
         type: 3}
       propertyPath: m_Name
-      value: Book_Fat
+      value: Book_Fat Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2f27c5e65a480c48b800004896a6301, type: 3}
+--- !u!1 &6468689799885073723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e2f27c5e65a480c48b800004896a6301,
+    type: 3}
+  m_PrefabInstance: {fileID: 6126037646635077738}
+  m_PrefabAsset: {fileID: 0}
