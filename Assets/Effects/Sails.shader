@@ -16,7 +16,7 @@
         LOD 200
 
         CGPROGRAM
-        #pragma surface surf StandardSpecular vertex:vert fullforwardshadows nofog 
+        #pragma surface surf StandardSpecular vertex:vert fullforwardshadows nofog  
 
         #pragma target 3.0
 

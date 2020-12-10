@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1163889212}
-  m_IndirectSpecularColor: {r: 0.059417687, g: 0.17837694, b: 0.25892782, a: 1}
+  m_IndirectSpecularColor: {r: 0.12018689, g: 0.25342977, b: 0.37409866, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -63,11 +63,11 @@ LightmapSettings:
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
     m_ExtractAmbientOcclusion: 0
-    m_Padding: 2
+    m_Padding: 5
     m_LightmapParameters: {fileID: 15200, guid: 0000000000000000f000000000000000,
       type: 0}
     m_LightmapsBakeMode: 1
-    m_TextureCompression: 0
+    m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
@@ -98,7 +98,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: a94436ae4c314cf4ea97393b8dc499cb,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -3888,6 +3889,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 69
       objectReference: {fileID: 0}
+    - target: {fileID: -1667623594225737433, guid: f2669b7fb839f31439f907835cae3a64,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 65
+      objectReference: {fileID: 0}
     - target: {fileID: -1554690199783827416, guid: f2669b7fb839f31439f907835cae3a64,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7495,6 +7501,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4053691362686766319, guid: b68ca70f72774aa43b7eb4b7e6ea3a68,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3b5db84f2f968914292fdde7bff5c446, type: 2}
     - target: {fileID: 4560383672644826649, guid: b68ca70f72774aa43b7eb4b7e6ea3a68,
         type: 3}
       propertyPath: m_Name
@@ -7713,17 +7724,17 @@ PrefabInstance:
     - target: {fileID: 574190653834893120, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 1064346168637991056, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 2273586908022269560, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 3716873462103396639, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
         type: 3}
@@ -7733,7 +7744,7 @@ PrefabInstance:
     - target: {fileID: 3716873462103396639, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4098042650694749093, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
         type: 3}
@@ -7793,12 +7804,17 @@ PrefabInstance:
     - target: {fileID: 5329660695718573218, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 6773566797510967532, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 64
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 9047022850113442631, guid: ec6f4a39fbd23774cbbf70f03fec6e72,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6f4a39fbd23774cbbf70f03fec6e72, type: 3}
