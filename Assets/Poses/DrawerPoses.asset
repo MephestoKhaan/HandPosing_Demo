@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8490e2d1861902742bd2013b216f8982, type: 3}
+  m_Name: DrawerPoses
+  m_EditorClassIdentifier: 
+  _snapPoints:
+  - pose:
+      relativeGrip:
+        position: {x: -0.008865188, y: 0.7282068, z: 0.35388905}
+        rotation: {x: 0.9991272, y: 0.01907768, z: -0.022567393, w: -0.02952526}
+      handeness: 1
+      _bones:
+      - boneID: 2
+        rotation: {x: 0.30833793, y: 0.9238784, z: 0.09783985, w: 0.20445986}
+      - boneID: 4
+        rotation: {x: -0.08290683, y: 0.060255945, z: -0.1139882, w: 0.98818135}
+      - boneID: 5
+        rotation: {x: 0.08243381, y: -0.060779322, z: 0.0055690147, w: 0.9947259}
+      - boneID: 6
+        rotation: {x: -0.33131677, y: 0.656611, z: 0.58664054, w: 0.3390342}
+      - boneID: 7
+        rotation: {x: -0.024205327, y: -0.008753274, z: -0.5679829, w: 0.8226378}
+      - boneID: 8
+        rotation: {x: -0.01709009, y: 0.017990407, z: -0.37395483, w: 0.92711496}
+      - boneID: 9
+        rotation: {x: -0.4106541, y: 0.57233024, z: 0.62161684, w: 0.34262785}
+      - boneID: 10
+        rotation: {x: -0.012900242, y: -0.0028841114, z: -0.5738998, w: 0.81881887}
+      - boneID: 11
+        rotation: {x: -0.071203455, y: -0.012684429, z: -0.30252296, w: 0.95039415}
+      - boneID: 12
+        rotation: {x: -0.4067068, y: 0.5400631, z: 0.6740826, w: 0.29754698}
+      - boneID: 13
+        rotation: {x: -0.041933253, y: -0.017226636, z: -0.5860843, w: 0.8089809}
+      - boneID: 14
+        rotation: {x: -0.018478915, y: -0.029348738, z: -0.29927766, w: 0.9535356}
+      - boneID: 16
+        rotation: {x: -0.1126914, y: 0.14229238, z: 0.9509377, w: 0.25054157}
+      - boneID: 17
+        rotation: {x: -0.08618289, y: 0.00715513, z: -0.64568627, w: 0.75869006}
+      - boneID: 18
+        rotation: {x: 0.0019242392, y: -0.04558639, z: -0.36114863, w: 0.9313914}
+    maxDistance: 0.1
+    snapsBack: 0
+    slideThresold: 0
+    positionRotationWeight: 0.5
+    scale: 1
+  - pose:
+      relativeGrip:
+        position: {x: -0.008865185, y: 0.7282067, z: 0.35388932}
+        rotation: {x: -0.027293524, y: -0.6608851, z: 0.74998933, w: 0.0014135754}
+      handeness: 0
+      _bones:
+      - boneID: 2
+        rotation: {x: 0.30833793, y: 0.9238784, z: 0.09783985, w: 0.20445986}
+      - boneID: 4
+        rotation: {x: -0.08290683, y: 0.060255945, z: -0.1139882, w: 0.98818135}
+      - boneID: 5
+        rotation: {x: 0.08243381, y: -0.060779322, z: 0.0055690147, w: 0.9947259}
+      - boneID: 6
+        rotation: {x: -0.33131677, y: 0.656611, z: 0.58664054, w: 0.3390342}
+      - boneID: 7
+        rotation: {x: -0.024205327, y: -0.008753274, z: -0.5679829, w: 0.8226378}
+      - boneID: 8
+        rotation: {x: -0.01709009, y: 0.017990407, z: -0.37395483, w: 0.92711496}
+      - boneID: 9
+        rotation: {x: -0.4106541, y: 0.57233024, z: 0.62161684, w: 0.34262785}
+      - boneID: 10
+        rotation: {x: -0.012900242, y: -0.0028841114, z: -0.5738998, w: 0.81881887}
+      - boneID: 11
+        rotation: {x: -0.071203455, y: -0.012684429, z: -0.30252296, w: 0.95039415}
+      - boneID: 12
+        rotation: {x: -0.4067068, y: 0.5400631, z: 0.6740826, w: 0.29754698}
+      - boneID: 13
+        rotation: {x: -0.041933253, y: -0.017226636, z: -0.5860843, w: 0.8089809}
+      - boneID: 14
+        rotation: {x: -0.018478915, y: -0.029348738, z: -0.29927766, w: 0.9535356}
+      - boneID: 16
+        rotation: {x: -0.1126914, y: 0.14229238, z: 0.9509377, w: 0.25054157}
+      - boneID: 17
+        rotation: {x: -0.08618289, y: 0.00715513, z: -0.64568627, w: 0.75869006}
+      - boneID: 18
+        rotation: {x: 0.0019242392, y: -0.04558639, z: -0.36114863, w: 0.9313914}
+    maxDistance: 0.1
+    snapsBack: 0
+    slideThresold: 0
+    positionRotationWeight: 0.5
+    scale: 1

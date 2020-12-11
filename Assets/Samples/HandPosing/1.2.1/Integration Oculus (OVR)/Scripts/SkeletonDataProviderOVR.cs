@@ -60,7 +60,7 @@ namespace HandPosing.OVRIntegration
         {
             get
             {
-                return RetrieveHandScale();
+                return 1f;// RetrieveHandScale();
             }
         }
 

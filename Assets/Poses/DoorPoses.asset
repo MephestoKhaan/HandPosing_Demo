@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8490e2d1861902742bd2013b216f8982, type: 3}
+  m_Name: DoorPoses
+  m_EditorClassIdentifier: 
+  _snapPoints:
+  - pose:
+      relativeGrip:
+        position: {x: 0.76332814, y: 0.61697936, z: -0.04240161}
+        rotation: {x: 0.056208156, y: 0.3395086, z: 0.6647789, w: -0.66305655}
+      handeness: 1
+      _bones:
+      - boneID: 2
+        rotation: {x: 0.2306163, y: 0.95145875, z: 0.038897127, w: 0.20007332}
+      - boneID: 4
+        rotation: {x: -0.08236691, y: 0.055065885, z: -0.16954572, w: 0.9805293}
+      - boneID: 5
+        rotation: {x: 0.08468608, y: -0.07109815, z: 0.13796549, w: 0.98424536}
+      - boneID: 6
+        rotation: {x: -0.2625771, y: 0.6838795, z: 0.60357803, w: 0.31473112}
+      - boneID: 7
+        rotation: {x: -0.025469549, y: -0.004945644, z: -0.44136935, w: 0.89695036}
+      - boneID: 8
+        rotation: {x: -0.017156893, y: 0.020986896, z: -0.2545187, w: 0.9666879}
+      - boneID: 9
+        rotation: {x: -0.32322764, y: 0.62242377, z: 0.60693246, w: 0.37382567}
+      - boneID: 10
+        rotation: {x: -0.012856833, y: -0.00033482377, z: -0.38710076, w: 0.9219478}
+      - boneID: 11
+        rotation: {x: -0.06990586, y: -0.012010179, z: -0.28714383, w: 0.9552578}
+      - boneID: 12
+        rotation: {x: -0.38220847, y: 0.55528575, z: 0.6623597, w: 0.32688552}
+      - boneID: 13
+        rotation: {x: -0.04125752, y: -0.012357387, z: -0.4482363, w: 0.89287704}
+      - boneID: 14
+        rotation: {x: -0.013327986, y: -0.029655673, z: -0.18666805, w: 0.98188496}
+      - boneID: 16
+        rotation: {x: -0.11867853, y: 0.11224547, z: 0.8422685, w: 0.51371217}
+      - boneID: 17
+        rotation: {x: -0.07368637, y: 0.020680372, z: -0.44412082, w: 0.8926922}
+      - boneID: 18
+        rotation: {x: 0.0011273972, y: -0.048742536, z: -0.11732149, w: 0.9918965}
+    maxDistance: 0.1
+    snapsBack: 0
+    slideThresold: 0
+    positionRotationWeight: 0.5
+    scale: 1
+  - pose:
+      relativeGrip:
+        position: {x: 0.69949996, y: 0.6169795, z: -0.04240167}
+        rotation: {x: -0.056207996, y: 0.33950868, z: 0.66477907, w: 0.6630563}
+      handeness: 0
+      _bones:
+      - boneID: 2
+        rotation: {x: 0.23061632, y: 0.9514588, z: 0.03889713, w: 0.20007333}
+      - boneID: 4
+        rotation: {x: -0.08236691, y: 0.055065885, z: -0.16954572, w: 0.9805293}
+      - boneID: 5
+        rotation: {x: 0.08468608, y: -0.07109815, z: 0.13796549, w: 0.98424536}
+      - boneID: 6
+        rotation: {x: -0.2625771, y: 0.6838795, z: 0.60357803, w: 0.31473112}
+      - boneID: 7
+        rotation: {x: -0.025469549, y: -0.004945644, z: -0.44136935, w: 0.89695036}
+      - boneID: 8
+        rotation: {x: -0.017156893, y: 0.020986896, z: -0.2545187, w: 0.9666879}
+      - boneID: 9
+        rotation: {x: -0.32322764, y: 0.62242377, z: 0.60693246, w: 0.37382567}
+      - boneID: 10
+        rotation: {x: -0.012856833, y: -0.00033482377, z: -0.38710076, w: 0.9219478}
+      - boneID: 11
+        rotation: {x: -0.06990586, y: -0.012010179, z: -0.28714383, w: 0.9552578}
+      - boneID: 12
+        rotation: {x: -0.38220847, y: 0.55528575, z: 0.6623597, w: 0.32688552}
+      - boneID: 13
+        rotation: {x: -0.04125752, y: -0.012357387, z: -0.4482363, w: 0.89287704}
+      - boneID: 14
+        rotation: {x: -0.013327986, y: -0.029655673, z: -0.18666805, w: 0.98188496}
+      - boneID: 16
+        rotation: {x: -0.11867853, y: 0.11224547, z: 0.8422685, w: 0.51371217}
+      - boneID: 17
+        rotation: {x: -0.07368637, y: 0.020680372, z: -0.44412082, w: 0.8926922}
+      - boneID: 18
+        rotation: {x: 0.0011273972, y: -0.048742536, z: -0.11732149, w: 0.9918965}
+    maxDistance: 0.1
+    snapsBack: 0
+    slideThresold: 0
+    positionRotationWeight: 0.5
+    scale: 1
+  - pose:
+      relativeGrip:
+        position: {x: 0.7026, y: 0.6169793, z: 0.0841}
+        rotation: {x: -0.66477853, y: 0.66305745, z: 0.056210104, w: 0.3395067}
+      handeness: 1
+      _bones:
+      - boneID: 2
+        rotation: {x: 0.23061632, y: 0.9514588, z: 0.03889713, w: 0.20007333}
+      - boneID: 4
+        rotation: {x: -0.08236691, y: 0.055065885, z: -0.16954572, w: 0.9805293}
+      - boneID: 5
+        rotation: {x: 0.08468608, y: -0.07109815, z: 0.13796549, w: 0.98424536}
+      - boneID: 6
+        rotation: {x: -0.2625771, y: 0.6838795, z: 0.60357803, w: 0.31473112}
+      - boneID: 7
+        rotation: {x: -0.025469549, y: -0.004945644, z: -0.44136935, w: 0.89695036}
+      - boneID: 8
+        rotation: {x: -0.017156893, y: 0.020986896, z: -0.2545187, w: 0.9666879}
+      - boneID: 9
+        rotation: {x: -0.32322764, y: 0.62242377, z: 0.60693246, w: 0.37382567}
+      - boneID: 10
+        rotation: {x: -0.012856833, y: -0.00033482377, z: -0.38710076, w: 0.9219478}
+      - boneID: 11
+        rotation: {x: -0.06990586, y: -0.012010179, z: -0.28714383, w: 0.9552578}
+      - boneID: 12
+        rotation: {x: -0.38220847, y: 0.55528575, z: 0.6623597, w: 0.32688552}
+      - boneID: 13
+        rotation: {x: -0.04125752, y: -0.012357387, z: -0.4482363, w: 0.89287704}
+      - boneID: 14
+        rotation: {x: -0.013327986, y: -0.029655673, z: -0.18666805, w: 0.98188496}
+      - boneID: 16
+        rotation: {x: -0.11867853, y: 0.11224547, z: 0.8422685, w: 0.51371217}
+      - boneID: 17
+        rotation: {x: -0.07368637, y: 0.020680372, z: -0.44412082, w: 0.8926922}
+      - boneID: 18
+        rotation: {x: 0.0011273972, y: -0.048742536, z: -0.11732149, w: 0.9918965}
+    maxDistance: 0.1
+    snapsBack: 0
+    slideThresold: 0
+    positionRotationWeight: 0.5
+    scale: 1
+  - pose:
+      relativeGrip:
+        position: {x: 0.7646001, y: 0.6169796, z: 0.08410001}
+        rotation: {x: 0.66477877, y: 0.6630577, z: 0.05621005, w: -0.3395068}
+      handeness: 0
+      _bones:
+      - boneID: 2
+        rotation: {x: 0.23061632, y: 0.9514588, z: 0.03889713, w: 0.20007333}
+      - boneID: 4
+        rotation: {x: -0.08236691, y: 0.055065885, z: -0.16954572, w: 0.9805293}
+      - boneID: 5
+        rotation: {x: 0.08468608, y: -0.07109815, z: 0.13796549, w: 0.98424536}
+      - boneID: 6
+        rotation: {x: -0.2625771, y: 0.6838795, z: 0.60357803, w: 0.31473112}
+      - boneID: 7
+        rotation: {x: -0.025469549, y: -0.004945644, z: -0.44136935, w: 0.89695036}
+      - boneID: 8
+        rotation: {x: -0.017156893, y: 0.020986896, z: -0.2545187, w: 0.9666879}
+      - boneID: 9
+        rotation: {x: -0.32322764, y: 0.62242377, z: 0.60693246, w: 0.37382567}
+      - boneID: 10
+        rotation: {x: -0.012856833, y: -0.00033482377, z: -0.38710076, w: 0.9219478}
+      - boneID: 11
+        rotation: {x: -0.06990586, y: -0.012010179, z: -0.28714383, w: 0.9552578}
+      - boneID: 12
+        rotation: {x: -0.38220847, y: 0.55528575, z: 0.6623597, w: 0.32688552}
+      - boneID: 13
+        rotation: {x: -0.04125752, y: -0.012357387, z: -0.4482363, w: 0.89287704}
+      - boneID: 14
+        rotation: {x: -0.013327986, y: -0.029655673, z: -0.18666805, w: 0.98188496}
+      - boneID: 16
+        rotation: {x: -0.11867853, y: 0.11224547, z: 0.8422685, w: 0.51371217}
+      - boneID: 17
+        rotation: {x: -0.07368637, y: 0.020680372, z: -0.44412082, w: 0.8926922}
+      - boneID: 18
+        rotation: {x: 0.0011273972, y: -0.048742536, z: -0.11732149, w: 0.9918965}
+    maxDistance: 0.1
+    snapsBack: 0
+    slideThresold: 0
+    positionRotationWeight: 0.5
+    scale: 1
