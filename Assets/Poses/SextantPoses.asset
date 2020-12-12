@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8490e2d1861902742bd2013b216f8982, type: 3}
+  m_Name: SextantPoses
+  m_EditorClassIdentifier: 
+  _snapPoints:
+  - pose:
+      relativeGrip:
+        position: {x: -0.053400055, y: -0.0484001, z: -0.0014999742}
+        rotation: {x: -0.73823416, y: 0.55379677, z: 0.060505904, w: 0.38034064}
+      handeness: 1
+      _bones:
+      - boneID: 2
+        rotation: {x: 0.20115924, y: 0.9584346, z: 0.028496977, w: 0.20031504}
+      - boneID: 4
+        rotation: {x: -0.08111128, y: 0.04718563, z: -0.24958372, w: 0.96379584}
+      - boneID: 5
+        rotation: {x: 0.08006271, y: -0.05313355, z: -0.084669426, w: 0.9917651}
+      - boneID: 6
+        rotation: {x: -0.17536125, y: 0.71064484, z: 0.6531373, w: 0.19402091}
+      - boneID: 7
+        rotation: {x: -0.02622547, y: -0.00063217495, z: -0.29102826, w: 0.9563548}
+      - boneID: 8
+        rotation: {x: -0.016643973, y: 0.025313389, z: -0.042232864, w: 0.9986484}
+      - boneID: 9
+        rotation: {x: -0.20635664, y: 0.67326367, z: 0.70210415, w: 0.105748795}
+      - boneID: 10
+        rotation: {x: -0.0127746565, y: -0.002263813, z: -0.5238582, w: 0.8517067}
+      - boneID: 11
+        rotation: {x: -0.064216435, y: -0.009124434, z: -0.2212838, w: 0.9730502}
+      - boneID: 12
+        rotation: {x: -0.21678014, y: 0.63956475, z: 0.73617446, w: 0.04483976}
+      - boneID: 13
+        rotation: {x: -0.039636735, y: -0.0074737063, z: -0.30763295, w: 0.9506498}
+      - boneID: 14
+        rotation: {x: -0.010377945, y: -0.02965297, z: -0.12278782, w: 0.99193555}
+      - boneID: 16
+        rotation: {x: -0.09130441, y: 0.21323141, z: 0.9453923, w: -0.22897458}
+      - boneID: 17
+        rotation: {x: -0.065778054, y: 0.027015444, z: -0.3330483, w: 0.9402246}
+      - boneID: 18
+        rotation: {x: 0.0011692076, y: -0.048657276, z: -0.1297714, w: 0.9903487}
+    maxDistance: 0.1
+    snapsBack: 0
+    slideThresold: 0
+    positionRotationWeight: 0.5
+    scale: 1
+  - pose:
+      relativeGrip:
+        position: {x: -0.04920001, y: -0.0491, z: 0.0033000489}
+        rotation: {x: -0.065361366, y: 0.3868055, z: 0.73486763, w: 0.5532451}
+      handeness: 0
+      _bones:
+      - boneID: 2
+        rotation: {x: 0.20115924, y: 0.9584346, z: 0.028496977, w: 0.20031504}
+      - boneID: 4
+        rotation: {x: -0.08111128, y: 0.04718563, z: -0.24958372, w: 0.96379584}
+      - boneID: 5
+        rotation: {x: 0.08006271, y: -0.05313355, z: -0.084669426, w: 0.9917651}
+      - boneID: 6
+        rotation: {x: -0.17536125, y: 0.71064484, z: 0.6531373, w: 0.19402091}
+      - boneID: 7
+        rotation: {x: -0.02622547, y: -0.00063217495, z: -0.29102826, w: 0.9563548}
+      - boneID: 8
+        rotation: {x: -0.016643973, y: 0.025313389, z: -0.042232864, w: 0.9986484}
+      - boneID: 9
+        rotation: {x: -0.20635664, y: 0.67326367, z: 0.70210415, w: 0.105748795}
+      - boneID: 10
+        rotation: {x: -0.0127746565, y: -0.002263813, z: -0.5238582, w: 0.8517067}
+      - boneID: 11
+        rotation: {x: -0.064216435, y: -0.009124434, z: -0.2212838, w: 0.9730502}
+      - boneID: 12
+        rotation: {x: -0.21678014, y: 0.63956475, z: 0.73617446, w: 0.04483976}
+      - boneID: 13
+        rotation: {x: -0.039636735, y: -0.0074737063, z: -0.30763295, w: 0.9506498}
+      - boneID: 14
+        rotation: {x: -0.010377945, y: -0.02965297, z: -0.12278782, w: 0.99193555}
+      - boneID: 16
+        rotation: {x: -0.09130441, y: 0.21323141, z: 0.9453923, w: -0.22897458}
+      - boneID: 17
+        rotation: {x: -0.065778054, y: 0.027015444, z: -0.3330483, w: 0.9402246}
+      - boneID: 18
+        rotation: {x: 0.0011692076, y: -0.048657276, z: -0.1297714, w: 0.9903487}
+    maxDistance: 0.1
+    snapsBack: 0
+    slideThresold: 0
+    positionRotationWeight: 0.5
+    scale: 1
