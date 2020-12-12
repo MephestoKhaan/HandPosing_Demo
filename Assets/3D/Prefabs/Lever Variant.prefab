@@ -101,7 +101,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 1
 --- !u!114 &7601089479267603049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,39 +184,6 @@ HingeJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &4182301950445927306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7545283172798484940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a99858afe0bf3042bcd707cde435ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posesCollection: {fileID: 11400000, guid: 3f18cac568cbcaf498c410ddb92a527f, type: 2}
-  ghostProvider: {fileID: 11400000, guid: 0c489ee65d68038419e1482bbb7aff24, type: 2}
-  StorePoses: 
-  LoadPoses: 
-  snapPoints:
-  - {fileID: 5549413641523947805}
-  - {fileID: 5552129120625600123}
-  ClearSnapPoints: 
---- !u!114 &4182301950445927307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7545283172798484940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customJoint: {fileID: 8979867307955571067}
 --- !u!153 &8979867307955571067
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -231,8 +198,8 @@ ConfigurableJoint:
   m_ConnectedAnchor: {x: -1.5218383, y: 0.9548554, z: -0.4949212}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
-  m_XMotion: 0
-  m_YMotion: 2
+  m_XMotion: 2
+  m_YMotion: 0
   m_ZMotion: 0
   m_AngularXMotion: 0
   m_AngularYMotion: 0
@@ -312,6 +279,39 @@ ConfigurableJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &4182301950445927306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545283172798484940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99858afe0bf3042bcd707cde435ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posesCollection: {fileID: 11400000, guid: 3f18cac568cbcaf498c410ddb92a527f, type: 2}
+  ghostProvider: {fileID: 11400000, guid: 0c489ee65d68038419e1482bbb7aff24, type: 2}
+  StorePoses: 
+  LoadPoses: 
+  snapPoints:
+  - {fileID: 5549413641523947805}
+  - {fileID: 5552129120625600123}
+  ClearSnapPoints: 
+--- !u!114 &4182301950445927307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7545283172798484940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customJoint: {fileID: 8979867307955571067}
 --- !u!65 &4182301950445927302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -323,8 +323,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.010000018, y: 0.002649095, z: 0.0067965025}
-  m_Center: {x: 0.000000009666166, y: 0.024218634, z: -0.000141928}
+  m_Size: {x: 0.010000018, y: 0.002617704, z: 0.0067965025}
+  m_Center: {x: 0.000000009666166, y: 0.024234334, z: -0.000141928}
 --- !u!65 &4182301950445927303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -349,8 +349,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.010000018, y: 0.030543178, z: 0.002457587}
-  m_Center: {x: 0.000000009666166, y: 0.0102715865, z: 0.003771207}
+  m_Size: {x: 0.010000018, y: 0.030543178, z: 0.0020632546}
+  m_Center: {x: 0.000000009666166, y: 0.0102715865, z: 0.0039683725}
 --- !u!65 &4182301950445927305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -362,8 +362,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.010000018, y: 0.030543178, z: 0.002457587}
-  m_Center: {x: 0.000000009666166, y: 0.0102715865, z: -0.0037712073}
+  m_Size: {x: 0.010000018, y: 0.030543178, z: 0.0023261458}
+  m_Center: {x: 0.000000009666166, y: 0.0102715865, z: -0.003836928}
 --- !u!1 &8019450999347730180
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,8 +413,8 @@ MonoBehaviour:
   slideThresold: 1
   pose:
     relativeGrip:
-      position: {x: 0.35972014, y: 0.0044382433, z: -0.024218917}
-      rotation: {x: -0.4949348, y: 0.25340116, z: -0.1831366, w: 0.81073326}
+      position: {x: 0.35972035, y: 0.0044383956, z: -0.0242189}
+      rotation: {x: -0.49493474, y: 0.2534011, z: -0.18313667, w: 0.81073326}
     handeness: 0
     _bones:
     - boneID: 2
@@ -451,7 +451,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 1
 --- !u!114 &246890744577180345
 MonoBehaviour:
   m_ObjectHideFlags: 0

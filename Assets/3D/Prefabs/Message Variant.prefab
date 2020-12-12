@@ -49,8 +49,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: -0.023531944, y: 0.024348218, z: 0.12858865}
-      rotation: {x: 0.780404, y: -0.10029359, z: -0.0983254, w: 0.60929775}
+      position: {x: -0.023532035, y: 0.024348319, z: 0.12858854}
+      rotation: {x: 0.7804037, y: -0.10029352, z: -0.09832539, w: 0.6092975}
     handeness: 0
     _bones:
     - boneID: 2
@@ -86,8 +86,8 @@ MonoBehaviour:
   surface: {fileID: 2740939543779092408}
   ghost: {fileID: 0}
   CreateMirror: 
-  maxDistance: 0.1
-  positionRotationWeight: 0.5
+  maxDistance: 0.05
+  positionRotationWeight: 1
 --- !u!114 &2740939543779092408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
   surface: {fileID: 3954431316201004251}
   ghost: {fileID: 0}
   CreateMirror: 
-  maxDistance: 0.1
-  positionRotationWeight: 0.5
+  maxDistance: 0.05
+  positionRotationWeight: 1
 --- !u!114 &3954431316201004251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,20 +210,6 @@ MonoBehaviour:
     startPoint: {x: -0.0009086121, y: 0.007311739, z: 0.050422303}
     endPoint: {x: -0.0015607995, y: 0.00912085, z: -0.0195936}
     angle: 360
---- !u!136 &4773724884676867023
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233113517345181814}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.016752943
-  m_Height: 0.2096875
-  m_Direction: 2
-  m_Center: {x: -0.0014669821, y: 0.007751208, z: 0.00035917753}
 --- !u!54 &1445254459
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -240,6 +226,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &4773724884676867023
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233113517345181814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.016752943
+  m_Height: 0.2096875
+  m_Direction: 2
+  m_Center: {x: -0.0014669821, y: 0.007751208, z: 0.00035917753}
 --- !u!114 &1445254457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +278,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1445254463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233113517345181814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ac296f69912cd428a1b4bc51ed5456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attach: {fileID: 0}
+  offset:
+    position: {x: -0.00000006599304, y: -0.022920728, z: 0.017086288}
+    rotation: {x: -0.087155774, y: 0.00000004220209, z: 0.00000001251586, w: 0.9961947}
+  canReattach: 0
+  reattachDistance: 0.05
+  reattachRotation: -1
+  rotationAxis: {x: 0, y: 0, z: 1}
 --- !u!1 &1641047940739133848
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,8 +347,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: 0.005624798, y: -0.004377108, z: -0.0065526203}
-      rotation: {x: 0.74193966, y: 0.36344692, z: -0.488844, w: 0.2801145}
+      position: {x: 0.005624788, y: -0.004377076, z: -0.006552616}
+      rotation: {x: 0.7419394, y: 0.36344686, z: -0.48884383, w: 0.2801143}
     handeness: 0
     _bones:
     - boneID: 2
@@ -364,8 +384,8 @@ MonoBehaviour:
   surface: {fileID: 4476202947946714024}
   ghost: {fileID: 0}
   CreateMirror: 
-  maxDistance: 0.1
-  positionRotationWeight: 0.5
+  maxDistance: 0.05
+  positionRotationWeight: 1
 --- !u!114 &4476202947946714024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -432,8 +452,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: -0.016106557, y: 0.007462961, z: 0.00498964}
-      rotation: {x: 0.33311042, y: -0.4532749, z: 0.47212133, w: 0.67873544}
+      position: {x: -0.016106367, y: 0.0074629956, z: 0.00498951}
+      rotation: {x: 0.3331103, y: -0.4532748, z: 0.47212097, w: 0.67873514}
     handeness: 0
     _bones:
     - boneID: 2
@@ -469,8 +489,8 @@ MonoBehaviour:
   surface: {fileID: 5469084150026495636}
   ghost: {fileID: 0}
   CreateMirror: 
-  maxDistance: 0.1
-  positionRotationWeight: 0.5
+  maxDistance: 0.05
+  positionRotationWeight: 1
 --- !u!114 &5469084150026495636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,8 +557,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: 0.011048815, y: -0.012898524, z: -0.13029413}
-      rotation: {x: -0.045128632, y: -0.38707146, z: 0.8012153, w: 0.4540864}
+      position: {x: 0.01104899, y: -0.012898591, z: -0.1302941}
+      rotation: {x: -0.04512857, y: -0.3870714, z: 0.80121475, w: 0.45408604}
     handeness: 0
     _bones:
     - boneID: 2
@@ -574,8 +594,8 @@ MonoBehaviour:
   surface: {fileID: 3699386117242525395}
   ghost: {fileID: 0}
   CreateMirror: 
-  maxDistance: 0.1
-  positionRotationWeight: 0.5
+  maxDistance: 0.05
+  positionRotationWeight: 1
 --- !u!114 &3699386117242525395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -679,8 +699,8 @@ MonoBehaviour:
   surface: {fileID: 4506914028598360318}
   ghost: {fileID: 0}
   CreateMirror: 
-  maxDistance: 0.1
-  positionRotationWeight: 0.5
+  maxDistance: 0.05
+  positionRotationWeight: 1
 --- !u!114 &4506914028598360318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,8 +804,8 @@ MonoBehaviour:
   surface: {fileID: 7684861029772902352}
   ghost: {fileID: 0}
   CreateMirror: 
-  maxDistance: 0.1
-  positionRotationWeight: 0.5
+  maxDistance: 0.05
+  positionRotationWeight: 1
 --- !u!114 &7684861029772902352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,8 +909,8 @@ MonoBehaviour:
   surface: {fileID: 8624503391064918357}
   ghost: {fileID: 0}
   CreateMirror: 
-  maxDistance: 0.1
-  positionRotationWeight: 0.5
+  maxDistance: 0.05
+  positionRotationWeight: 1
 --- !u!114 &8624503391064918357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -918,37 +938,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b7da3de702cd3b54bb13bde9c9b085f4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.4063117
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7da3de702cd3b54bb13bde9c9b085f4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.022920728
+      value: 0.88007927
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7da3de702cd3b54bb13bde9c9b085f4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01708626
+      value: -1.2450002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7da3de702cd3b54bb13bde9c9b085f4,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.087155774
+      value: -0.04975921
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7da3de702cd3b54bb13bde9c9b085f4,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000029802319
+      value: -0.8178797
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7da3de702cd3b54bb13bde9c9b085f4,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000014901159
+      value: -0.07155522
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7da3de702cd3b54bb13bde9c9b085f4,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9961947
+      value: 0.5687501
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b7da3de702cd3b54bb13bde9c9b085f4,
         type: 3}

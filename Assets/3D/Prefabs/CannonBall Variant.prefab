@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!135 &2705818915899987664
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569422234575808069}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.04
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &273534011
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -29,6 +16,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &2705818915899987664
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569422234575808069}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.04
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &273534009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 2201246028111150335}
-  snapsBack: 0
+  snapsBack: 1
   slideThresold: 0
   pose:
     relativeGrip:
@@ -210,12 +210,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 2201246028111150335}
-  snapsBack: 0
+  snapsBack: 1
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: 0.00031381845, y: 0.0053032637, z: -0.013405904}
-      rotation: {x: -0.43828335, y: 0.041892428, z: -0.17257547, w: 0.8811189}
+      position: {x: 0.00031372232, y: 0.0053032315, z: -0.013405877}
+      rotation: {x: -0.4382832, y: 0.041892387, z: -0.17257549, w: 0.8811189}
     handeness: 0
     _bones:
     - boneID: 2
@@ -333,7 +333,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0d7935ad62660f24a9c4a31a8d0a67f6,
         type: 3}
       propertyPath: m_Name
-      value: CannonBall (4)
+      value: CannonBall Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0d7935ad62660f24a9c4a31a8d0a67f6,
         type: 3}

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &706669937741932882
+--- !u!1 &759048710841496655
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,37 +8,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5156180838283361869}
-  - component: {fileID: 2484059776577195664}
-  - component: {fileID: 1403990688720863843}
+  - component: {fileID: 4254978754640116980}
+  - component: {fileID: 7068699783675301760}
+  - component: {fileID: 3733382050677171808}
   m_Layer: 0
-  m_Name: Snap Point_Mirror
+  m_Name: Snap Point (1)_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5156180838283361869
+--- !u!4 &4254978754640116980
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706669937741932882}
-  m_LocalRotation: {x: -0.027293524, y: -0.6608851, z: 0.74998933, w: 0.0014135754}
-  m_LocalPosition: {x: -0.008865185, y: 0.7282067, z: 0.35388932}
+  m_GameObject: {fileID: 759048710841496655}
+  m_LocalRotation: {x: -0.60274047, y: 0.03150443, z: 0.000676782, w: 0.7973148}
+  m_LocalPosition: {x: -0.008865188, y: 0.7458, z: 0.3574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5002295744424735667}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2484059776577195664
+--- !u!114 &7068699783675301760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706669937741932882}
+  m_GameObject: {fileID: 759048710841496655}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f2cfc5f76584ab449800835d0d4de6e, type: 3}
@@ -46,11 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 5002295744424735667}
   snapsBack: 0
-  slideThresold: 0
+  slideThresold: 1
   pose:
     relativeGrip:
-      position: {x: -0.008865185, y: 0.7282067, z: 0.35388932}
-      rotation: {x: -0.027293524, y: -0.6608851, z: 0.74998933, w: 0.0014135754}
+      position: {x: -0.008865188, y: 0.7458, z: 0.3574}
+      rotation: {x: -0.60274047, y: 0.03150443, z: 0.000676782, w: 0.7973148}
     handeness: 0
     _bones:
     - boneID: 2
@@ -83,18 +83,18 @@ MonoBehaviour:
       rotation: {x: -0.08618289, y: 0.00715513, z: -0.64568627, w: 0.75869006}
     - boneID: 18
       rotation: {x: 0.0019242392, y: -0.04558639, z: -0.36114863, w: 0.9313914}
-  surface: {fileID: 1403990688720863843}
+  surface: {fileID: 3733382050677171808}
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
   positionRotationWeight: 0.5
---- !u!114 &1403990688720863843
+--- !u!114 &3733382050677171808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 706669937741932882}
+  m_GameObject: {fileID: 759048710841496655}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c015a1ade01253e4c92301949c1c6c7c, type: 3}
@@ -102,9 +102,219 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 5002295744424735667}
   _data:
-    startPoint: {x: 0.11346627, y: 0.7370755, z: 0.36181003}
-    endPoint: {x: -0.12195198, y: 0.73630965, z: 0.36181003}
-    angle: 180
+    startPoint: {x: -0.06794485, y: 0.7370755, z: 0.3646952}
+    endPoint: {x: 0.06058024, y: 0.73630965, z: 0.3646952}
+    angle: 360
+--- !u!1 &4424648471677874169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2407738362314826749}
+  - component: {fileID: 2607434835671789872}
+  - component: {fileID: 7071516039646482733}
+  m_Layer: 0
+  m_Name: Snap Point (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2407738362314826749
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424648471677874169}
+  m_LocalRotation: {x: -0.019074753, y: 0.9991272, z: -0.029525321, w: 0.022567306}
+  m_LocalPosition: {x: -0.008865188, y: 0.7458, z: 0.3574}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5002295744424735667}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -183.33301, y: -2.6539917, z: -182.265}
+--- !u!114 &2607434835671789872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424648471677874169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2cfc5f76584ab449800835d0d4de6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relativeTo: {fileID: 5002295744424735667}
+  snapsBack: 0
+  slideThresold: 1
+  pose:
+    relativeGrip:
+      position: {x: -0.008865188, y: 0.7458, z: 0.3574}
+      rotation: {x: -0.019074753, y: 0.9991272, z: -0.029525321, w: 0.022567306}
+    handeness: 1
+    _bones:
+    - boneID: 2
+      rotation: {x: 0.30833793, y: 0.9238784, z: 0.09783985, w: 0.20445986}
+    - boneID: 4
+      rotation: {x: -0.08290683, y: 0.060255945, z: -0.1139882, w: 0.98818135}
+    - boneID: 5
+      rotation: {x: 0.08243381, y: -0.060779322, z: 0.0055690147, w: 0.9947259}
+    - boneID: 6
+      rotation: {x: -0.33131677, y: 0.656611, z: 0.58664054, w: 0.3390342}
+    - boneID: 7
+      rotation: {x: -0.024205327, y: -0.008753274, z: -0.5679829, w: 0.8226378}
+    - boneID: 8
+      rotation: {x: -0.01709009, y: 0.017990407, z: -0.37395483, w: 0.92711496}
+    - boneID: 9
+      rotation: {x: -0.4106541, y: 0.57233024, z: 0.62161684, w: 0.34262785}
+    - boneID: 10
+      rotation: {x: -0.012900242, y: -0.0028841114, z: -0.5738998, w: 0.81881887}
+    - boneID: 11
+      rotation: {x: -0.071203455, y: -0.012684429, z: -0.30252296, w: 0.95039415}
+    - boneID: 12
+      rotation: {x: -0.4067068, y: 0.5400631, z: 0.6740826, w: 0.29754698}
+    - boneID: 13
+      rotation: {x: -0.041933253, y: -0.017226636, z: -0.5860843, w: 0.8089809}
+    - boneID: 14
+      rotation: {x: -0.018478915, y: -0.029348738, z: -0.29927766, w: 0.9535356}
+    - boneID: 16
+      rotation: {x: -0.1126914, y: 0.14229238, z: 0.9509377, w: 0.25054157}
+    - boneID: 17
+      rotation: {x: -0.08618289, y: 0.00715513, z: -0.64568627, w: 0.75869006}
+    - boneID: 18
+      rotation: {x: 0.0019242392, y: -0.04558639, z: -0.36114863, w: 0.9313914}
+  surface: {fileID: 7071516039646482733}
+  ghost: {fileID: 0}
+  CreateMirror: 
+  maxDistance: 0.1
+  positionRotationWeight: 0.5
+--- !u!114 &7071516039646482733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424648471677874169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c015a1ade01253e4c92301949c1c6c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relativeTo: {fileID: 5002295744424735667}
+  _data:
+    startPoint: {x: -0.06794485, y: 0.7370755, z: 0.3646952}
+    endPoint: {x: 0.06058024, y: 0.73630965, z: 0.3646952}
+    angle: 360
+--- !u!1 &4695808509585120849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4168254656114123241}
+  - component: {fileID: 7554321671778921876}
+  - component: {fileID: 5198123817896563030}
+  m_Layer: 0
+  m_Name: Snap Point_Mirror
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4168254656114123241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695808509585120849}
+  m_LocalRotation: {x: 0.03141578, y: 0.7664964, z: -0.64145184, w: -0.0059931343}
+  m_LocalPosition: {x: -0.008865189, y: 0.7282068, z: 0.35388905}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5002295744424735667}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7554321671778921876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695808509585120849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2cfc5f76584ab449800835d0d4de6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relativeTo: {fileID: 5002295744424735667}
+  snapsBack: 0
+  slideThresold: 1
+  pose:
+    relativeGrip:
+      position: {x: -0.008865189, y: 0.7282068, z: 0.35388905}
+      rotation: {x: 0.03141578, y: 0.7664964, z: -0.64145184, w: -0.0059931343}
+    handeness: 0
+    _bones:
+    - boneID: 2
+      rotation: {x: 0.30833793, y: 0.9238784, z: 0.09783985, w: 0.20445986}
+    - boneID: 4
+      rotation: {x: -0.08290683, y: 0.060255945, z: -0.1139882, w: 0.98818135}
+    - boneID: 5
+      rotation: {x: 0.08243381, y: -0.060779322, z: 0.0055690147, w: 0.9947259}
+    - boneID: 6
+      rotation: {x: -0.33131677, y: 0.656611, z: 0.58664054, w: 0.3390342}
+    - boneID: 7
+      rotation: {x: -0.024205327, y: -0.008753274, z: -0.5679829, w: 0.8226378}
+    - boneID: 8
+      rotation: {x: -0.01709009, y: 0.017990407, z: -0.37395483, w: 0.92711496}
+    - boneID: 9
+      rotation: {x: -0.4106541, y: 0.57233024, z: 0.62161684, w: 0.34262785}
+    - boneID: 10
+      rotation: {x: -0.012900242, y: -0.0028841114, z: -0.5738998, w: 0.81881887}
+    - boneID: 11
+      rotation: {x: -0.071203455, y: -0.012684429, z: -0.30252296, w: 0.95039415}
+    - boneID: 12
+      rotation: {x: -0.4067068, y: 0.5400631, z: 0.6740826, w: 0.29754698}
+    - boneID: 13
+      rotation: {x: -0.041933253, y: -0.017226636, z: -0.5860843, w: 0.8089809}
+    - boneID: 14
+      rotation: {x: -0.018478915, y: -0.029348738, z: -0.29927766, w: 0.9535356}
+    - boneID: 16
+      rotation: {x: -0.1126914, y: 0.14229238, z: 0.9509377, w: 0.25054157}
+    - boneID: 17
+      rotation: {x: -0.08618289, y: 0.00715513, z: -0.64568627, w: 0.75869006}
+    - boneID: 18
+      rotation: {x: 0.0019242392, y: -0.04558639, z: -0.36114863, w: 0.9313914}
+  surface: {fileID: 5198123817896563030}
+  ghost: {fileID: 0}
+  CreateMirror: 
+  maxDistance: 0.1
+  positionRotationWeight: 0.5
+--- !u!114 &5198123817896563030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4695808509585120849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c015a1ade01253e4c92301949c1c6c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relativeTo: {fileID: 5002295744424735667}
+  _data:
+    startPoint: {x: -0.06794485, y: 0.7370755, z: 0.3646952}
+    endPoint: {x: 0.06058024, y: 0.73630965, z: 0.3646952}
+    angle: 360
 --- !u!54 &8299449053247621603
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -119,7 +329,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &290670858176991624
 CapsuleCollider:
@@ -239,12 +449,12 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.8389244, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.226, y: 0.8389244, z: 0.269}
+  m_ConnectedAnchor: {x: 0, y: 0.8389244, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
-  m_XMotion: 2
+  m_XMotion: 0
   m_YMotion: 0
-  m_ZMotion: 0
+  m_ZMotion: 1
   m_AngularXMotion: 0
   m_AngularYMotion: 0
   m_AngularZMotion: 0
@@ -252,7 +462,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0
+    limit: 0.45
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -341,7 +551,9 @@ MonoBehaviour:
   LoadPoses: 
   snapPoints:
   - {fileID: 2319540421955562982}
-  - {fileID: 2484059776577195664}
+  - {fileID: 2607434835671789872}
+  - {fileID: 7554321671778921876}
+  - {fileID: 7068699783675301760}
   ClearSnapPoints: 
 --- !u!114 &8299449053247621601
 MonoBehaviour:
@@ -355,7 +567,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customJoint: {fileID: 0}
+  customJoint: {fileID: 8299449053247621614}
+--- !u!153 &8299449053247621614
+ConfigurableJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5629615899663280393}
+  m_ConnectedBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0.8389244, z: 0}
+  m_Axis: {x: 1, y: 0, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 1.226, y: 0.8389244, z: 0.269}
+  serializedVersion: 2
+  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_XMotion: 2
+  m_YMotion: 2
+  m_ZMotion: 0
+  m_AngularXMotion: 2
+  m_AngularYMotion: 2
+  m_AngularZMotion: 2
+  m_LinearLimitSpring:
+    spring: 0
+    damper: 0
+  m_LinearLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularXLimitSpring:
+    spring: 0
+    damper: 0
+  m_LowAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_HighAngularXLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularYZLimitSpring:
+    spring: 0
+    damper: 0
+  m_AngularYLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_AngularZLimit:
+    limit: 0
+    bounciness: 0
+    contactDistance: 0
+  m_TargetPosition: {x: 0, y: 0, z: 0}
+  m_TargetVelocity: {x: 0, y: 0, z: 0}
+  m_XDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_YDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_ZDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
+  m_RotationDriveMode: 0
+  m_AngularXDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_AngularYZDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_SlerpDrive:
+    serializedVersion: 3
+    positionSpring: 0
+    positionDamper: 0
+    maximumForce: 3.4028233e+38
+  m_ProjectionMode: 0
+  m_ProjectionDistance: 0.1
+  m_ProjectionAngle: 180
+  m_ConfiguredInWorldSpace: 0
+  m_SwapBodies: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 0
+  m_MassScale: 1
+  m_ConnectedMassScale: 10
 --- !u!1 &6856410882811463399
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 5002295744424735667}
   snapsBack: 0
-  slideThresold: 0
+  slideThresold: 1
   pose:
     relativeGrip:
       position: {x: -0.008865188, y: 0.7282068, z: 0.35388905}
@@ -443,7 +750,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0.5
+  positionRotationWeight: 1
 --- !u!114 &5705923974720295386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,9 +765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 5002295744424735667}
   _data:
-    startPoint: {x: 0.11346627, y: 0.7370755, z: 0.36181003}
-    endPoint: {x: -0.12195198, y: 0.73630965, z: 0.36181003}
-    angle: 180
+    startPoint: {x: -0.06794485, y: 0.7370755, z: 0.3646952}
+    endPoint: {x: 0.06058024, y: 0.73630965, z: 0.3646952}
+    angle: 360
 --- !u!1001 &4819133095949046872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -471,7 +778,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.226
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
@@ -481,7 +788,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.269
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
@@ -491,7 +798,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7933523
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
@@ -501,7 +808,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.60876286
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
@@ -526,7 +833,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}
       propertyPath: m_Name
-      value: SideTableDraw Variant
+      value: SideTableDraw
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2daaf90cceb91284c8ea98117b3bc35a,
         type: 3}

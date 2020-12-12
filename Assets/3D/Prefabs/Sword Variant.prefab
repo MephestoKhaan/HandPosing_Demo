@@ -89,12 +89,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 5007844408752040221}
-  snapsBack: 0
+  snapsBack: 1
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: 0.0021947369, y: -0.02639624, z: -0.56678283}
-      rotation: {x: 0.42279753, y: 0.28174642, z: -0.65463847, w: 0.5597413}
+      position: {x: 0.0021947369, y: -0.026396241, z: -0.5667829}
+      rotation: {x: 0.42279738, y: 0.2817464, z: -0.65463823, w: 0.5597412}
     handeness: 1
     _bones:
     - boneID: 2
@@ -281,6 +281,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12040357, y: 0.119117856, z: 0.027354836}
   m_Center: {x: -0.001285918, y: -0.014788672, z: -0.4807188}
+--- !u!54 &8012338230151295081
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635339425281422247}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!136 &512866871533910535
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -308,22 +324,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11879258, y: 0.032174006, z: 0.14787626}
   m_Center: {x: 0.0014812127, y: -0.09138032, z: -0.5634551}
---- !u!54 &8012338230151295081
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5635339425281422247}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &8012338230151295082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 5007844408752040221}
-  snapsBack: 0
+  snapsBack: 1
   slideThresold: 0
   pose:
     relativeGrip:
@@ -527,7 +527,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d167244ab23c7604b8d1fbb1a3d826ed,
         type: 3}
       propertyPath: m_Name
-      value: Sword
+      value: Sword Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d167244ab23c7604b8d1fbb1a3d826ed,
         type: 3}
