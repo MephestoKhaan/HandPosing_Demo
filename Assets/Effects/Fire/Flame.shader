@@ -1,4 +1,6 @@
-﻿Shader "Custom/Flame"
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+Shader "Custom/Flame"
 {
     Properties
     {
@@ -11,7 +13,7 @@
     }
     SubShader
     {
-        Tags { "RenderType"="Transparent" "Queue"="Transparent" }
+        Tags { "RenderType"="Transparent" "Queue"="Transparent" "DisableBatching"="True"}
         LOD 100
         Blend SrcAlpha One
         Cull Off
@@ -53,17 +55,21 @@
                 float3 viewDir = ObjSpaceViewDir(v.vertex);
                 viewDir.y = 0;
                 viewDir = normalize(viewDir);
-                float3 normal = normalize(v.normal);
+                float desiredAngle = atan2(viewDir.z, viewDir.x);
+                float currentAngle = atan2(v.normal.z, v.normal.x);
+                float angle = (currentAngle-desiredAngle);
 
-                float angle =  acos(clamp(dot(viewDir, normal), -1, 1)) * 57.29578;
-                float4 rotation = float4(0, sin(angle), 0, cos(angle));
-                
-                float m = rotation.x*rotation.x + rotation.y*rotation.y + rotation.z*rotation.z + rotation.w*rotation.w;
-            v.vertex.xyz = v.vertex.xyz + 2 * cross(rotation.xyz, rotation.w * v.vertex.xyz + cross(rotation.xyz,v.vertex.xyz)) / m;
+                float3x3 rotMatrix;
+                float cosinus = cos(angle);
+                float sinus = sin(angle);
+                rotMatrix[0].xyz = float3(cosinus, 0, sinus);
+                rotMatrix[1].xyz = float3(0, 1, 0);
+                rotMatrix[2].xyz = float3(-sinus, 0, cosinus);
+                float4 newPos = float4(mul(rotMatrix, v.vertex.xyz), 1);
 
-
-                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.vertex = UnityObjectToClipPos(newPos);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+
                 return o;
             }
 
