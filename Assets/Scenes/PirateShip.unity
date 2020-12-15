@@ -841,14 +841,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126286814}
-  m_LocalRotation: {x: -0, y: 0.9101245, z: -0, w: 0.41433495}
-  m_LocalPosition: {x: -1.372, y: -0.575, z: 0.397}
+  m_LocalRotation: {x: -0, y: -0.97423446, z: -0, w: 0.22553745}
+  m_LocalPosition: {x: -0.957, y: -0.575, z: 0.099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1579379273}
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 131.04501, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -153.931, z: 0}
 --- !u!1 &131012798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,6 +1431,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Squid
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 999be669c2d27e04ab3325bb5d23bc79,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1204681518659254217, guid: 999be669c2d27e04ab3325bb5d23bc79,
         type: 3}
@@ -4422,7 +4427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
   customJoint: {fileID: 0}
+  multiGrab: 0
 --- !u!1001 &970844433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6662,6 +6669,11 @@ PrefabInstance:
       propertyPath: grabThresoldHand.y
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4635681503502107842, guid: 886cb81ddb5a38541bfc87cbb5fabfd5,
+        type: 3}
+      propertyPath: trackingSpace
+      value: 
+      objectReference: {fileID: 1579379273}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
 --- !u!4 &1360929314 stripped
@@ -8205,6 +8217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
 --- !u!4 &1568957246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3484241640537872161, guid: 063df731a117b9946a45b6cc6625a7d7,
@@ -10318,6 +10331,11 @@ PrefabInstance:
       propertyPath: grabThresoldHand.y
       value: 0.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7195348242957399794, guid: 23b1fe0762145904ba4ff0b82e7de514,
+        type: 3}
+      propertyPath: trackingSpace
+      value: 
+      objectReference: {fileID: 1579379273}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23b1fe0762145904ba4ff0b82e7de514, type: 3}
 --- !u!4 &1788163782 stripped
@@ -13591,6 +13609,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 424068215}
     m_Modifications:
+    - target: {fileID: 60581130200864923, guid: 00b893af08c84c64ca62567b26873405,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 860671414373500872, guid: 00b893af08c84c64ca62567b26873405,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13610,6 +13633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cannon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062219742054174147, guid: 00b893af08c84c64ca62567b26873405,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3348898546436929187, guid: 00b893af08c84c64ca62567b26873405,
         type: 3}
@@ -14014,10 +14042,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4182301950445927299, guid: b68ca70f72774aa43b7eb4b7e6ea3a68,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4560383672644826649, guid: b68ca70f72774aa43b7eb4b7e6ea3a68,
         type: 3}
       propertyPath: m_Name
       value: Lever
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979867307955571067, guid: b68ca70f72774aa43b7eb4b7e6ea3a68,
+        type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68ca70f72774aa43b7eb4b7e6ea3a68, type: 3}
@@ -14596,6 +14634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
 --- !u!1001 &7056784946614562810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14698,6 +14737,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 424068215}
     m_Modifications:
+    - target: {fileID: 42056126, guid: 82815a22eccde64459e89f689b4511e5, type: 3}
+      propertyPath: m_EnablePreprocessing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 42056127, guid: 82815a22eccde64459e89f689b4511e5, type: 3}
+      propertyPath: multiGrab
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 122760302250752130, guid: 82815a22eccde64459e89f689b4511e5,
         type: 3}
       propertyPath: slideThresold
