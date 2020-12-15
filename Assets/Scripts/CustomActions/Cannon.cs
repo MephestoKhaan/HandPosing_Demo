@@ -14,19 +14,24 @@ public class Cannon : MonoBehaviour
     [SerializeField]
     private Collider detectorCollider;
 
-    private static readonly WaitForSeconds DETECTION_TIMEOUT = new WaitForSeconds(0.5f); 
+    private static readonly WaitForSeconds DETECTION_TIMEOUT = new WaitForSeconds(0.5f);
 
-    private HashSet<Rigidbody> ammunition = new HashSet<Rigidbody>();
+    private HashSet<Rigidbody> _ammunition = new HashSet<Rigidbody>();
 
+    private Rigidbody _cannonBody;
 
+    private void Awake()
+    {
+        _cannonBody = this.GetComponentInParent<Rigidbody>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Ammunition"))
+        if (other.CompareTag("Ammunition"))
         {
-            if(!ammunition.Contains(other.attachedRigidbody))
+            if (!_ammunition.Contains(other.attachedRigidbody))
             {
-                ammunition.Add(other.attachedRigidbody);
+                _ammunition.Add(other.attachedRigidbody);
                 other.attachedRigidbody.transform.position = cannonMouth.position;
                 other.attachedRigidbody.gameObject.SetActive(false);
             }
@@ -36,13 +41,14 @@ public class Cannon : MonoBehaviour
     public void Fire()
     {
         StartCoroutine(DisableDetection());
-        foreach (var item in ammunition)
+        foreach (var item in _ammunition)
         {
             item.transform.position = cannonMouth.position;
             item.gameObject.SetActive(true);
             item.AddForce(cannonMouth.forward * strenght, ForceMode.Impulse);
         }
-        ammunition.Clear();
+        _cannonBody.AddForceAtPosition(cannonMouth.up * strenght * 0.2f, cannonMouth.position, ForceMode.Impulse);
+        _ammunition.Clear();
         explosion.ForEach(ps => ps.Play());
     }
 
