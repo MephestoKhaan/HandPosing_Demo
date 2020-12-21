@@ -1,47 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &1461869762
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572811309505591282}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &7754290195136482658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572811309505591282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db1c6519013845d46bcd6bf42d45de38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flare: {fileID: 298175150367079207}
-  stopVelocity: 3
-  velocitySensitivity: 20
-  waypoints:
-  - {fileID: 5911376765068834101}
-  - {fileID: 5708375256755710082}
-  - {fileID: 4670238524049157137}
-  - {fileID: 6977605916325031027}
-  - {fileID: 2035230582610257070}
-  - {fileID: 1129534331531306930}
-  fuseDuration: 10
-  OnFuseEnded:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1076925178487829819
 GameObject:
   m_ObjectHideFlags: 0
@@ -53,7 +11,7 @@ GameObject:
   - component: {fileID: 7684796699904066245}
   - component: {fileID: 7098045844295166800}
   - component: {fileID: 6469979196100799578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2035230582610257070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FuseTip (5)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -186,7 +144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6977605916325031027}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FuseTip (4)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -218,7 +176,7 @@ GameObject:
   - component: {fileID: 4974501622306975985}
   - component: {fileID: 3299366770329507931}
   - component: {fileID: 5470489991966557597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4670238524049157137}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FuseTip (3)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -390,6 +348,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
+--- !u!136 &750647192
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741657767031305776}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.24923146
+  m_Direction: 0
+  m_Center: {x: 0.043241486, y: 0.00000055568114, z: 0.0000000032413465}
+--- !u!54 &1461869762
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572811309505591282}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &7754290195136482658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572811309505591282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db1c6519013845d46bcd6bf42d45de38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flare: {fileID: 298175150367079207}
+  stopVelocity: 3
+  velocitySensitivity: 20
+  waypoints:
+  - {fileID: 5911376765068834101}
+  - {fileID: 5708375256755710082}
+  - {fileID: 4670238524049157137}
+  - {fileID: 6977605916325031027}
+  - {fileID: 2035230582610257070}
+  - {fileID: 1129534331531306930}
+  fuseDuration: 10
+  OnFuseEnded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5515194599638390767
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7467277029411406689}
   - component: {fileID: 1893838261154367828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FuseCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,20 +450,6 @@ CapsuleCollider:
   m_Height: 0.054533426
   m_Direction: 1
   m_Center: {x: -0.00077621354, y: 0.0021316968, z: 5.7422476e-11}
---- !u!136 &750647192
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5741657767031305776}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.01
-  m_Height: 0.24923146
-  m_Direction: 0
-  m_Center: {x: 0.043241486, y: 0.00000055568114, z: 0.0000000032413465}
 --- !u!1 &6157289508397221660
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1129534331531306930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FuseTip (6)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -488,7 +489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911376765068834101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FuseTip (1)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -518,7 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5708375256755710082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FuseTip (2)
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -546,10 +547,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 470322411603893280}
     m_Modifications:
+    - target: {fileID: 507687756829430849, guid: 13df9abc33bc92449aa5a305d245bf73,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 669739820488147760, guid: 13df9abc33bc92449aa5a305d245bf73,
         type: 3}
       propertyPath: playOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891914869267301954, guid: 13df9abc33bc92449aa5a305d245bf73,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2759646031571507962, guid: 13df9abc33bc92449aa5a305d245bf73,
         type: 3}
@@ -646,10 +657,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2796872317891063004, guid: 13df9abc33bc92449aa5a305d245bf73,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7356422978030025869, guid: 13df9abc33bc92449aa5a305d245bf73,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7516825722930967743, guid: 13df9abc33bc92449aa5a305d245bf73,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13df9abc33bc92449aa5a305d245bf73, type: 3}
@@ -732,20 +753,35 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: -4331234497422704200, guid: 2076d1ef454c24e4d9aac733f77db0fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 844744494180499578, guid: 2076d1ef454c24e4d9aac733f77db0fa,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 844744494180499578, guid: 2076d1ef454c24e4d9aac733f77db0fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2076d1ef454c24e4d9aac733f77db0fa,
         type: 3}
       propertyPath: m_Name
-      value: FuseLighter
+      value: FuseLighter Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2076d1ef454c24e4d9aac733f77db0fa,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2076d1ef454c24e4d9aac733f77db0fa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2076d1ef454c24e4d9aac733f77db0fa, type: 3}

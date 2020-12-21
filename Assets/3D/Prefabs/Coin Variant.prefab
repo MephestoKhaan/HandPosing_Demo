@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1207907045}
   - component: {fileID: 1207907047}
   - component: {fileID: 1207907046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 1429460497}
   - component: {fileID: 1429460499}
   - component: {fileID: 1429460498}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
 --- !u!114 &9187286400200692796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +286,7 @@ GameObject:
   - component: {fileID: 7415161812583899972}
   - component: {fileID: 2689291320515468510}
   - component: {fileID: 8750518671936899831}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +391,7 @@ GameObject:
   - component: {fileID: 6093314759217997908}
   - component: {fileID: 7848340139844731645}
   - component: {fileID: 8479231745551436144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,12 +550,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: af2a562a006f0ca458e037db93dbfe16,
         type: 3}
       propertyPath: m_Name
-      value: Coin (5)
+      value: Coin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: af2a562a006f0ca458e037db93dbfe16,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: af2a562a006f0ca458e037db93dbfe16,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af2a562a006f0ca458e037db93dbfe16, type: 3}

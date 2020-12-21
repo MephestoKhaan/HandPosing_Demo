@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7092307278510458594}
   - component: {fileID: 5969916680967439331}
   - component: {fileID: 7361296039610328590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3808305143329226345}
   - component: {fileID: 2101237201065426589}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6997289124013760946}
   - component: {fileID: 9116007256895634295}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3804016678408584942}
   - component: {fileID: 5954878521589175719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4475695430911507490}
   - component: {fileID: 1170657269585179419}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6084611154912645797}
   - component: {fileID: 9004947505851790033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4196766830268597988}
   - component: {fileID: 6434715049398893163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 8790551569841922654}
   - component: {fileID: 3249817737552975583}
   - component: {fileID: 2084685904562599897}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3856777809529765313}
   - component: {fileID: 4791985147996308336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8558086406218532399}
   - component: {fileID: 3133548340583364645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
 --- !u!1001 &8277670434098669062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -705,12 +706,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fcc28040779c5c947bebb48b774ce79a,
         type: 3}
       propertyPath: m_Name
-      value: TeaPot
+      value: TeaPot Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fcc28040779c5c947bebb48b774ce79a,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fcc28040779c5c947bebb48b774ce79a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcc28040779c5c947bebb48b774ce79a, type: 3}

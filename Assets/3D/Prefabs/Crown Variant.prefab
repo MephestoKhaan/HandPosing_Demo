@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8548935762436190038}
   - component: {fileID: 1570979849334990390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 2067400768796251604}
   - component: {fileID: 7768379695801941843}
   - component: {fileID: 2529530913872577972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6179272877676817001}
   - component: {fileID: 2184767650301099058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 4866203244592221998}
   - component: {fileID: 8864247102267373154}
   - component: {fileID: 5851397183079730955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 8189611213049033339}
   - component: {fileID: 266465446270213049}
   - component: {fileID: 1654579494453760967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 6163120773499272379}
   - component: {fileID: 7937910995435933665}
   - component: {fileID: 4513137513515234595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -416,7 +416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348019221888637665}
   - component: {fileID: 6503140469472537655}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8039064163742828591}
   - component: {fileID: 2572779583687413573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974327039588195309}
   - component: {fileID: 3274863381295541022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -677,7 +677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3926947086588762876}
   - component: {fileID: 3044329268554800991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
 --- !u!1 &3738086623504217154
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +828,7 @@ GameObject:
   - component: {fileID: 7379589971877483050}
   - component: {fileID: 4347229149348626316}
   - component: {fileID: 6803055272981535967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -884,7 +885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 210511559604748720}
   - component: {fileID: 4573312472857722091}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2895136616012941372}
   - component: {fileID: 9218773136615780265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1060,7 @@ GameObject:
   - component: {fileID: 1688077278370179478}
   - component: {fileID: 1766114018103590347}
   - component: {fileID: 7240785830264340569}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,7 +1117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2426145374319247665}
   - component: {fileID: 5940022223816566104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1203,7 +1204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3696652457799368850}
   - component: {fileID: 6734093459621772136}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1290,7 +1291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8425328354901394783}
   - component: {fileID: 1613175444839463458}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1378,7 +1379,7 @@ GameObject:
   - component: {fileID: 1106092370944788060}
   - component: {fileID: 337175713606590452}
   - component: {fileID: 3349011052623113659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1435,7 +1436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6592743842723378994}
   - component: {fileID: 7528892913631577100}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1522,7 +1523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5271338913301435084}
   - component: {fileID: 8964449062863785767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1609,7 +1610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8635054278974144937}
   - component: {fileID: 2415190644391065883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1697,7 +1698,7 @@ GameObject:
   - component: {fileID: 5312783973266557382}
   - component: {fileID: 6901785436545850402}
   - component: {fileID: 1334645101575800841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1754,7 +1755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6628707630061647908}
   - component: {fileID: 833800479024321710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1841,7 +1842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5613515682479223030}
   - component: {fileID: 7569623926100238890}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1988,7 +1989,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7b0418b2dd0a0c743b3fa97491703686,
         type: 3}
       propertyPath: m_Name
-      value: Crown
+      value: Crown Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7b0418b2dd0a0c743b3fa97491703686,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b0418b2dd0a0c743b3fa97491703686, type: 3}

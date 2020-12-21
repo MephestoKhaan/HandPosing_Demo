@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7021808462421440922}
   - component: {fileID: 2150138843752038828}
   - component: {fileID: 2148325913755923392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 7032486382662707934}
   - component: {fileID: 3762262459829696779}
   - component: {fileID: 4584052084060711202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
 --- !u!114 &539203685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +287,7 @@ GameObject:
   - component: {fileID: 4943117683016720352}
   - component: {fileID: 5409002503029543603}
   - component: {fileID: 4722828979950176993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +393,7 @@ GameObject:
   - component: {fileID: 4780722073235519192}
   - component: {fileID: 7975937628362367342}
   - component: {fileID: 5161208240417427734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,6 +559,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c5d66e50975d1ad45b1fcbeff7019e88,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5d66e50975d1ad45b1fcbeff7019e88, type: 3}

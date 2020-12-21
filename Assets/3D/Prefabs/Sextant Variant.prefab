@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 26530054}
   - component: {fileID: 26530053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 848504358}
   - component: {fileID: 848504359}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1098358879}
   - component: {fileID: 1098358878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1363239344}
   - component: {fileID: 1363239345}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 3318198768604516040}
   - component: {fileID: 1546778541308495026}
   - component: {fileID: 1640478057281176519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 962445397}
   - component: {fileID: 962445398}
   - component: {fileID: 962445400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SextantRuler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,12 +548,12 @@ ConfigurableJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2251971220163670559}
   m_ConnectedBody: {fileID: 1568957241}
-  m_Anchor: {x: 0, y: 0.008801706, z: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.011311839, y: 0.1043027, z: 0.00000004656613}
+  m_ConnectedAnchor: {x: -0.011311839, y: 0.09550103, z: -0.000000014901161}
   serializedVersion: 2
-  m_SecondaryAxis: {x: 0, y: 1, z: 0}
+  m_SecondaryAxis: {x: 0, y: 0, z: 1}
   m_XMotion: 0
   m_YMotion: 0
   m_ZMotion: 0
@@ -668,6 +668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immovable: 0
+  _grabPoints: []
   customJoint: {fileID: 0}
   multiGrab: 0
 --- !u!1 &3597947590128830702
@@ -680,7 +681,7 @@ GameObject:
   m_Component:
   - component: {fileID: 945848903893298769}
   - component: {fileID: 6142561064078671247}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +725,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2851687139595126466}
   - component: {fileID: 5177082303440508000}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373285420908927411}
   - component: {fileID: 5767257456782263500}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,7 +812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4895342730259890444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sextant Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1100101269757372058}
   - component: {fileID: 5535104927920852038}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +891,7 @@ GameObject:
   - component: {fileID: 5352093372593138009}
   - component: {fileID: 1014971362811792355}
   - component: {fileID: 826106938830776266}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SextantGlass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -981,7 +982,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6393788048463058825}
   - component: {fileID: 7393400332479707637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1029,7 +1030,7 @@ GameObject:
   - component: {fileID: 1568957241}
   - component: {fileID: 1568957242}
   - component: {fileID: 1568957243}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SextantMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1150,3 +1151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   immovable: 0
+  _grabPoints:
+  - {fileID: 3318198768604516040}
+  - {fileID: 1640478057281176519}

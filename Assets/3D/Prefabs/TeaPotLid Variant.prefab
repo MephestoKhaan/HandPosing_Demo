@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2452787123848470987}
   - component: {fileID: 6394858185799926772}
   - component: {fileID: 830295174369105933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 3303435938670353118}
   - component: {fileID: 4101432505941421943}
   - component: {fileID: 3359550777143564486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,20 +210,6 @@ MonoBehaviour:
     startPoint: {x: 0, y: 0.1592651, z: 0}
     endPoint: {x: 0, y: 0.1609165, z: 0}
     angle: 360
---- !u!64 &7752954778266599809
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6399399790625219703}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -220452194615920350, guid: b8876ab854f8673418dfcce951e1e887, type: 3}
 --- !u!54 &490602064
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -240,6 +226,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &7752954778266599809
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6399399790625219703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -220452194615920350, guid: b8876ab854f8673418dfcce951e1e887, type: 3}
 --- !u!114 &490602067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
 --- !u!114 &490602068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,12 +338,17 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b8876ab854f8673418dfcce951e1e887,
         type: 3}
       propertyPath: m_Name
-      value: TeaPotLid
+      value: TeaPotLid Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b8876ab854f8673418dfcce951e1e887,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8876ab854f8673418dfcce951e1e887,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8876ab854f8673418dfcce951e1e887, type: 3}

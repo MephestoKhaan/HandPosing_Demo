@@ -43,6 +43,20 @@ CapsuleCollider:
   m_Height: 0.22223635
   m_Direction: 2
   m_Center: {x: -0.00019782782, y: 0, z: 0.006334327}
+--- !u!136 &7031502244913223693
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361551109442981945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.018932283
+  m_Height: 0.057251453
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.11256647}
 --- !u!114 &397636468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,20 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!136 &7031502244913223693
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361551109442981945}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.018932283
-  m_Height: 0.057251453
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.11256647}
+  immovable: 0
 --- !u!1 &7341129056109337665
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,7 +101,7 @@ GameObject:
   - component: {fileID: 2655550830818524299}
   - component: {fileID: 6017865148793134685}
   - component: {fileID: 8314259082536689238}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +206,7 @@ GameObject:
   - component: {fileID: 4487164305254186265}
   - component: {fileID: 2241386535742335237}
   - component: {fileID: 6446199801395096210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snap Point_Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,6 +371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: afdf382598093b641887917a146c40fe,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdf382598093b641887917a146c40fe, type: 3}
