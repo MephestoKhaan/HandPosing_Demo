@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HandPosing.Interaction;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,18 @@ public class LockedChest : MonoBehaviour
     [SerializeField]
     private Attacher key;
     [SerializeField]
-    private HingeJoint joint;
+    private ConfigurableJoint joint;
 
-    private JointLimits _openLimits;
-    private JointLimits _closedLimits = new JointLimits()
+    private SoftJointLimit _lockedLimit = new SoftJointLimit()
     {
-        min = 0,
-        max = 0
+        bounciness = 0,
+        contactDistance = 0.01f,
+        limit = 0f
     };
+
+    private SoftJointLimit _openLimitLow;
+    private SoftJointLimit _openLimitHigh;
+
 
     private void OnEnable()
     {
@@ -29,7 +34,8 @@ public class LockedChest : MonoBehaviour
 
     private void Awake()
     {
-        _openLimits = joint.limits;
+        _openLimitLow = joint.lowAngularXLimit;
+        _openLimitHigh = joint.highAngularXLimit;
     }
 
     private void Start()
@@ -46,11 +52,12 @@ public class LockedChest : MonoBehaviour
     {
         if (locked)
         {
-            joint.limits = _closedLimits;
+            joint.lowAngularXLimit = joint.highAngularXLimit = _lockedLimit;
         }
         else
         {
-            joint.limits = _openLimits;
+            joint.lowAngularXLimit = _openLimitLow;
+            joint.highAngularXLimit = _openLimitHigh;
         }
     }
 }

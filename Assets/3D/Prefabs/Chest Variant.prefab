@@ -335,41 +335,6 @@ ConfigurableJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!59 &1909802870
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6022888553523548554}
-  m_ConnectedBody: {fileID: 1909802866}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: -1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: 0.16993862, z: -0.25637457}
-  m_UseSpring: 0
-  m_Spring:
-    spring: 0
-    damper: 0
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 1
-  m_Limits:
-    min: 0
-    max: 120.03015
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!114 &1909802868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +367,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  immovable: 0
+  _grabPoints: []
   customJoint: {fileID: 1909802867}
+  multiGrab: 0
 --- !u!54 &1909802866
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -497,19 +465,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.32761008, y: 0.30902004, z: 0.05730921}
   m_Center: {x: 0.18515092, y: 0.025013775, z: 0.22948208}
---- !u!65 &8271996739204455978
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6568548586751833379}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.054666236, y: 0.25497293, z: 0.05819401}
-  m_Center: {x: -0.0008692816, y: -0.05203727, z: 0.2299246}
 --- !u!65 &8158929641471936027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -523,6 +478,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.054666236, y: 0.0203318, z: 0.05819401}
   m_Center: {x: -0.0008692816, y: 0.16935802, z: 0.2299246}
+--- !u!65 &8271996739204455978
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568548586751833379}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.054666236, y: 0.25497293, z: 0.05819401}
+  m_Center: {x: -0.0008692816, y: -0.05203727, z: 0.2299246}
 --- !u!1001 &4678810737216335738
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,7 +16,8 @@ Shader "Custom/Flame"
         Tags { "RenderType"="Transparent" "Queue"="Transparent" "DisableBatching"="True"}
         LOD 100
         Blend SrcAlpha One
-        Cull Off
+        Offset 0, 100
+        Cull Back
 
         Pass
         {
