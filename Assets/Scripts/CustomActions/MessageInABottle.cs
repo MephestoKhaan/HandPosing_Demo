@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class MessageInABottle : MonoBehaviour
 {
@@ -6,10 +7,15 @@ public class MessageInABottle : MonoBehaviour
     private Attacher cork;
     [SerializeField]
     private Attacher message;
-    [SerializeField]
-    private Collider messageCollider;
+
+    private List<Collider> _messageColliders;
 
     private bool _messageWasReleased;
+
+    private void Awake()
+    {
+        _messageColliders = new List<Collider>(message.GetComponentsInChildren<Collider>());
+    }
 
     private void OnEnable()
     {
@@ -30,7 +36,7 @@ public class MessageInABottle : MonoBehaviour
 
     private void Start()
     {
-        messageCollider.enabled = false;
+        _messageColliders.ForEach(c=>c.enabled = false);
     }
 
 
@@ -48,7 +54,7 @@ public class MessageInABottle : MonoBehaviour
     {
         if(!_messageWasReleased)
         {
-            messageCollider.enabled = true;
+            _messageColliders.ForEach(c => c.enabled = true);
         }
     }
 
@@ -56,7 +62,7 @@ public class MessageInABottle : MonoBehaviour
     {
         if (!_messageWasReleased)
         {
-            messageCollider.enabled = false;
+            _messageColliders.ForEach(c => c.enabled = false);
         }
     }
 
