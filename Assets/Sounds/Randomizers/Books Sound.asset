@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da6a3aa9c3035e7488bff3120cc8f9a7, type: 3}
+  m_Name: Books Sound
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 560c6077a65165a49bc2c58ce5050415, type: 3}
+  noise: 0.2
+  minMaxPitch: {x: 0.5, y: 0.8}
+  minMaxVolume: {x: 0.05, y: 0.15}

@@ -12,6 +12,8 @@ public class Cannon : MonoBehaviour
     [SerializeField]
     private Transform cannonMouth;
     [SerializeField]
+    private AudioSource explossionSound;
+    [SerializeField]
     private Collider detectorCollider;
 
     private static readonly WaitForSeconds DETECTION_TIMEOUT = new WaitForSeconds(0.5f);
@@ -50,6 +52,7 @@ public class Cannon : MonoBehaviour
         _cannonBody.AddForceAtPosition(cannonMouth.up * strenght * 0.2f, cannonMouth.position, ForceMode.Impulse);
         _ammunition.Clear();
         explosion.ForEach(ps => ps.Play());
+        explossionSound.Play();
     }
 
 

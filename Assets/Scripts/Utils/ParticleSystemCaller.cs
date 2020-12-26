@@ -7,6 +7,8 @@ public class ParticleSystemCaller: MonoBehaviour
 
     private System.Action stoppedCallback;
 
+    public UnityEngine.Events.UnityEvent OnPlayed;
+
     private void Awake()
     {
         particles = this.GetComponent<ParticleSystem>();
@@ -16,6 +18,7 @@ public class ParticleSystemCaller: MonoBehaviour
     {
         stoppedCallback = onStopped;
         particles.Play(true);
+        OnPlayed?.Invoke();
     }
 
     private void OnParticleSystemStopped()
