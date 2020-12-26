@@ -4742,6 +4742,7 @@ GameObject:
   - component: {fileID: 4361801158873524}
   - component: {fileID: 198656289721292014}
   - component: {fileID: 199514137936353666}
+  - component: {fileID: 2689942065451628140}
   m_Layer: 0
   m_Name: SmallExplosion
   m_TagString: Untagged
@@ -9572,6 +9573,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2689942065451628140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1828176872806910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c3e549e82d2ea4fa5add70aaa9ad7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1834016579923706
 GameObject:
   m_ObjectHideFlags: 0
@@ -9583,6 +9596,7 @@ GameObject:
   - component: {fileID: 4138755341248686}
   - component: {fileID: 198263872644927810}
   - component: {fileID: 199132262764125350}
+  - component: {fileID: 8558803951108884091}
   m_Layer: 0
   m_Name: AdditonalSmoke
   m_TagString: Untagged
@@ -14393,3 +14407,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8558803951108884091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834016579923706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c3e549e82d2ea4fa5add70aaa9ad7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

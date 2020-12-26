@@ -1619,6 +1619,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &308742918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2421439367374587445, guid: 85300fbd838de2d4bab96c44067ffa7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 4825365702334398355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &308742922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308742918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7c3e549e82d2ea4fa5add70aaa9ad7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &336786393 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 1909802866, guid: 6108abf59b5d4a245aaf154509c6113b,
@@ -3400,6 +3418,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707209182}
+  - component: {fileID: 707209184}
+  - component: {fileID: 707209183}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -3423,6 +3443,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707209183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707209181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110db65f0b527e7499b83390590e81e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splashPrefab: {fileID: 1332153839200238889, guid: c1c88308ebb5d2541a282905b854ee4c,
+    type: 3}
+  minMaxSize: {x: 0.2, y: 0.5}
+  speedModifier: 50
+--- !u!65 &707209184
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707209181}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 400, y: 10.689405, z: 400}
+  m_Center: {x: 0, y: -6.872266, z: 0}
 --- !u!1 &748811889
 GameObject:
   m_ObjectHideFlags: 0
@@ -7980,7 +8029,7 @@ GameObject:
   - component: {fileID: 1488923333}
   m_Layer: 0
   m_Name: LeftEyeAnchor
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15696,39 +15745,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 424068215}
     m_Modifications:
-    - target: {fileID: 23696540474864930, guid: 85300fbd838de2d4bab96c44067ffa7f,
+    - target: {fileID: 1028718642865758209, guid: 85300fbd838de2d4bab96c44067ffa7f,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.14756623
-      objectReference: {fileID: 0}
-    - target: {fileID: 23696540474864930, guid: 85300fbd838de2d4bab96c44067ffa7f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.14756623
-      objectReference: {fileID: 0}
-    - target: {fileID: 23696540474864930, guid: 85300fbd838de2d4bab96c44067ffa7f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.14756624
-      objectReference: {fileID: 0}
-    - target: {fileID: 62274571260299406, guid: 85300fbd838de2d4bab96c44067ffa7f,
-        type: 3}
-      propertyPath: NoiseModule.frequency
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649481377306144505, guid: 85300fbd838de2d4bab96c44067ffa7f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649481377306144505, guid: 85300fbd838de2d4bab96c44067ffa7f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4649481377306144505, guid: 85300fbd838de2d4bab96c44067ffa7f,
-        type: 3}
-      propertyPath: m_LocalScale.z
+      propertyPath: moveWithTransform
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4872310443880124833, guid: 85300fbd838de2d4bab96c44067ffa7f,
@@ -15790,6 +15809,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FuseLighter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851511373748553244, guid: 85300fbd838de2d4bab96c44067ffa7f,
+        type: 3}
+      propertyPath: m_RenderAlignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851511373748553244, guid: 85300fbd838de2d4bab96c44067ffa7f,
+        type: 3}
+      propertyPath: m_Flip.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851511373748553244, guid: 85300fbd838de2d4bab96c44067ffa7f,
+        type: 3}
+      propertyPath: m_Flip.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85300fbd838de2d4bab96c44067ffa7f, type: 3}
