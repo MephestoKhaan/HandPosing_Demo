@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Boat Squeaks Sound
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: 708f85a10643b134c889fe9c5f56eb0a, type: 3}
-  - {fileID: 8300000, guid: c09e00b15bbeac44f98c5d5ef1fc2455, type: 3}
+  - {fileID: 8300000, guid: 7669c3cf9ca85214a96fa694939ff951, type: 3}
+  - {fileID: 8300000, guid: 12d512093f7df9b49a39e8d4fc4fe59f, type: 3}
+  - {fileID: 8300000, guid: 23c6f9a4496b9b64f904010b95b2668f, type: 3}
+  noise: 0
   minMaxPitch: {x: 0.8, y: 1.2}
   minMaxVolume: {x: 0.8, y: 1.5}
