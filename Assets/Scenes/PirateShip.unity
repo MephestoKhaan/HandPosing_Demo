@@ -898,7 +898,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126286814}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -1.39, y: 0, z: 0.31}
+  m_LocalPosition: {x: -1.39, y: -0.5, z: 0.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1579379273}
@@ -9342,6 +9342,12 @@ ConfigurableJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 50
+--- !u!136 &1609017428 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 3062219742054174145, guid: 00b893af08c84c64ca62567b26873405,
+    type: 3}
+  m_PrefabInstance: {fileID: 3062219742054174141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1609772729
 GameObject:
   m_ObjectHideFlags: 0
@@ -12744,6 +12750,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3062219742054174141}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1940098345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7545283172798484940, guid: b68ca70f72774aa43b7eb4b7e6ea3a68,
+    type: 3}
+  m_PrefabInstance: {fileID: 4182301950445927292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!75 &1940098346
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940098345}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 5}
 --- !u!1001 &1944964536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13059,7 +13083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lever: {fileID: 1183207874}
-  dotThresold: 0.5
+  dotThresold: 0.3
   director: {fileID: 2044875539}
 --- !u!1 &2051853042
 GameObject:
@@ -14980,11 +15004,31 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3062219742054174145, guid: 00b893af08c84c64ca62567b26873405,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062219742054174147, guid: 00b893af08c84c64ca62567b26873405,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062219742054174149, guid: 00b893af08c84c64ca62567b26873405,
+        type: 3}
+      propertyPath: _grabPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3062219742054174149, guid: 00b893af08c84c64ca62567b26873405,
         type: 3}
       propertyPath: customJoint
       value: 
       objectReference: {fileID: 1597225246}
+    - target: {fileID: 3062219742054174149, guid: 00b893af08c84c64ca62567b26873405,
+        type: 3}
+      propertyPath: _grabPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1609017428}
     - target: {fileID: 3172529260836663206, guid: 00b893af08c84c64ca62567b26873405,
         type: 3}
       propertyPath: m_EnablePreprocessing
