@@ -24,8 +24,11 @@ public class AudioClipRandomizer : ScriptableObject
 
         if (range >= 0f)
         {
-            pitch = Mathf.Lerp(minMaxPitch.x, minMaxPitch.y, Mathf.Clamp01(range) + Random.Range(-noise,noise));
-            volume = Mathf.Lerp(minMaxVolume.x, minMaxVolume.y, Mathf.Clamp01(range) + Random.Range(-noise, noise));
+            float clampedRange = Mathf.Clamp01(range);
+            float min = Mathf.Max(-noise, -clampedRange);
+            float max = Mathf.Min(noise, 1f - clampedRange);
+            pitch = Mathf.Lerp(minMaxPitch.x, minMaxPitch.y, clampedRange + Random.Range(min, max));
+            volume = Mathf.Lerp(minMaxVolume.x, minMaxVolume.y, clampedRange + Random.Range(min, max));
         }
         else
         {
