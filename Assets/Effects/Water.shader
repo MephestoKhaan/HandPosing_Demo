@@ -19,7 +19,7 @@
         LOD 200
 
         CGPROGRAM
-        #pragma surface surf StandardSpecular vertex:vert noshadow  nolightmap 
+        #pragma surface surf StandardSpecular vertex:vert noshadow nolightmap noambient  nodynlightmap nometa noforwardadd  halfasview 
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0

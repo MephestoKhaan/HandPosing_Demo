@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Splash
   m_Shader: {fileID: 210, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHABLEND_ON _NORMALMAP _REQUIRE_UV2
+  m_ShaderKeywords: _ALPHABLEND_ON _NORMALMAP
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -64,7 +64,7 @@ Material:
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
     - _ColorMode: 0
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.132
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.826
@@ -73,7 +73,7 @@ Material:
     - _DistortionStrengthScaled: 0.1
     - _DstBlend: 1
     - _EmissionEnabled: 0
-    - _FlipbookMode: 1
+    - _FlipbookMode: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.776
     - _GlossyReflections: 1
