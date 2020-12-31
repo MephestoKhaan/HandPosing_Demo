@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1163889212}
-  m_IndirectSpecularColor: {r: 0.12018689, g: 0.25342977, b: 0.37409866, a: 1}
+  m_IndirectSpecularColor: {r: 0.2941635, g: 0.48471308, b: 0.64426666, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 2f54dbf17df570d46a1b32a0b8e366ed,
+  m_LightingDataAsset: {fileID: 112000000, guid: 549abefeb083fe942ab4e6706ab51f87,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -16677,6 +16677,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694962014036742276, guid: 6108abf59b5d4a245aaf154509c6113b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694962014036742276, guid: 6108abf59b5d4a245aaf154509c6113b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6694962014036742276, guid: 6108abf59b5d4a245aaf154509c6113b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6108abf59b5d4a245aaf154509c6113b, type: 3}

@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.mefistofiles.handposing": {
-      "version": "https://github.com/MephestoKhaan/HandPosing.git#develop",
+      "version": "https://github.com/MephestoKhaan/HandPosing.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "19fe2b8385ae4caa2058736c90d7c561b86fe1e5"
+      "hash": "d7d77c99eef91c95cabe275c5affb73df579ed41"
     },
     "com.unity.burst": {
       "version": "1.3.9",

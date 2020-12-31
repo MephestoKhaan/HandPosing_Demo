@@ -32,6 +32,7 @@ static class JenkinsUnityAppend
 		PlayerSettings.Android.useAPKExpansionFiles = false;
 		PlayerSettings.applicationIdentifier = APP_ID_RELEASE;
 
+		PlayerSettings.Android.useCustomKeystore = true;
 		PlayerSettings.Android.keystoreName = keystoreName;
         PlayerSettings.Android.keystorePass = keystorepass;
         PlayerSettings.Android.keyaliasName = keyaliasName;
