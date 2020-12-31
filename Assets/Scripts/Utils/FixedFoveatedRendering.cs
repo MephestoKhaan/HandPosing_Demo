@@ -7,7 +7,7 @@ public class FixedFoveatedRendering : MonoBehaviour
         OVRPlugin.SystemHeadset headset = OVRPlugin.GetSystemHeadsetType();
         if (headset == OVRPlugin.SystemHeadset.Oculus_Quest)
         {
-            OVRManager.fixedFoveatedRenderingLevel = OVRManager.FixedFoveatedRenderingLevel.Medium;
+            OVRManager.fixedFoveatedRenderingLevel = OVRManager.FixedFoveatedRenderingLevel.Low;
 
         }
         else if (headset == (OVRPlugin.SystemHeadset.Oculus_Quest_2))
