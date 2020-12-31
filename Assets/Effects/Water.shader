@@ -23,6 +23,7 @@
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
+        #define _SPECULARHIGHLIGHTS_OFF
 
         sampler2D _MainTex;
         sampler2D _Bump;
