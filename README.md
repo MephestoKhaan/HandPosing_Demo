@@ -3,7 +3,8 @@
 Full Unity Project:
 A Pirate demo for the HandPosing tool, for Oculus Quest. Compatible with HandTracking and Controllers. 
 
-![image](https://user-images.githubusercontent.com/4976810/105975941-d7150180-608f-11eb-81e0-9778614e4303.png)
+![image](https://user-images.githubusercontent.com/4976810/105975984-e85e0e00-608f-11eb-8f9f-8cccb3f22de6.png)
+
 
 Download the tool package here: https://github.com/MephestoKhaan/HandPosing
 
