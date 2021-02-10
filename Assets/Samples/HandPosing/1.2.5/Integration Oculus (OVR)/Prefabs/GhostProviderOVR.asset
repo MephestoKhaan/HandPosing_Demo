@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0c1abeb4cdab745a87b33e13f24750, type: 3}
+  m_Name: GhostProviderOVR
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 2186238356769882176, guid: fa5cfeae0d3031e41affab84f2263840,
+    type: 3}
+  rightHand: {fileID: 4796675561261683715, guid: 63b28ea3e535bab48a39e62ea8e097d7,
+    type: 3}
