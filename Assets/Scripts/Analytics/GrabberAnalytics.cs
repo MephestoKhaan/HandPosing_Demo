@@ -28,7 +28,7 @@ public class GrabberAnalytics : MonoBehaviour
     private void GrabStarted(GameObject obj)
     {
 #if ANALYTICS_PROD
-        Analytics.Custom("GrabStarted", new Dictionary<string, object>
+        Analytics.CustomEvent("GrabStarted", new Dictionary<string, object>
         {
             { "handeness", handeness.ToString()},
             { "flex", grabber.Flex?.InterfaceFlexType.ToString()},
@@ -42,7 +42,7 @@ public class GrabberAnalytics : MonoBehaviour
     private void GrabEnded(GameObject obj, float time)
     {
 #if ANALYTICS_PROD
-        Analytics.Custom("GrabEnded", new Dictionary<string, object>
+        Analytics.CustomEvent("GrabEnded", new Dictionary<string, object>
         {
             { "handeness", handeness.ToString()},
             { "flex", grabber.Flex?.InterfaceFlexType.ToString()},

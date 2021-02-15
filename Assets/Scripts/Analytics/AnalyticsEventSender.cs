@@ -6,7 +6,7 @@ public class AnalyticsEventSender : MonoBehaviour
     public void SendEvent(string title)
     {
 #if ANALYTICS_PROD
-        Analytics.Custom(title);
+        Analytics.CustomEvent(title);
 #else
         Debug.Log($"AnalyticsEventSender: {title}");
 #endif
