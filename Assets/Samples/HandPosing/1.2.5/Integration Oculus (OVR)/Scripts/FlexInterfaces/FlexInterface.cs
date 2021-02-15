@@ -1,15 +1,14 @@
-// CONFIDENTIAL
-// Copyright(c) Facebook Technologies, LLC and its affiliates. All rights reserved.
-
 using UnityEngine;
-
 
 namespace HandPosing.OVRIntegration.GrabEngine
 {
     public enum FlexType
     {
         Noop = 0, 
-        PinchTriggerFlex
+        Controller,
+        PinchTriggerFlex,
+        SphereGrab,
+        SpherePinchGrab
     }
 
     /// <summary>
@@ -20,11 +19,13 @@ namespace HandPosing.OVRIntegration.GrabEngine
     {
         FlexType InterfaceFlexType { get; }
 
+        bool IsValid { get; }
+
         /// <summary>
         /// Return normalized grab strength.
         /// </summary>
-        /// <returns>Grab strength, restricted to 0.0-1.0.</returns>
-        float GrabStrength { get; }
+        /// <returns>Grab strength, restricted to 0.0-1.0. Null if no strength is available</returns>
+        float? GrabStrength { get; }
 
         /// <summary>
         /// Return strenght values to start (Y) or stop (X) grabbing.
@@ -34,5 +35,7 @@ namespace HandPosing.OVRIntegration.GrabEngine
         /// Return strenght values to indicate a grabbing attempt, can be narrower than GrabThresold.
         /// </summary>
         Vector2 FailGrabThresold { get; }
+
+        float AlmostGrabRelease { get; }
     }
 }
