@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Playables;
 
 public class Trapdoor : MonoBehaviour
@@ -13,6 +14,8 @@ public class Trapdoor : MonoBehaviour
 
     private bool _hasPlayed;
 
+    public UnityEvent OnOpened;
+
 
     private void Update()
     {
@@ -23,6 +26,7 @@ public class Trapdoor : MonoBehaviour
             {
                 director.Play();
                 _hasPlayed = true;
+                OnOpened?.Invoke();
             }
         }
         else if(dot <= -dotThresold)

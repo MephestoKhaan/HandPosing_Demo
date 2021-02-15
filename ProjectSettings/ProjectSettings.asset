@@ -761,10 +761,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 81ce268e-e5a6-4515-aa0d-a09fc5ee5873
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: HandPosing_TechDemo
+  organizationId: mefistofiles
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

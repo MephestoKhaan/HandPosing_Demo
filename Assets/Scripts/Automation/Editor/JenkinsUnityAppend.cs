@@ -1,9 +1,14 @@
-﻿using UnityEditor;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
 
 static class JenkinsUnityAppend
 {
-	
 	public static readonly string APP_ID_RELEASE = "com.mefistofiles.handposing_techdemo";
+
+	public static readonly string[] DEFINES_PROD = new string[] {
+		"ANALYTICS_PROD",
+	};
 
 	private static void BuildAndroidRelease()
 	{
@@ -31,6 +36,8 @@ static class JenkinsUnityAppend
         EditorUserBuildSettings.development = false;
 		PlayerSettings.Android.useAPKExpansionFiles = false;
 		PlayerSettings.applicationIdentifier = APP_ID_RELEASE;
+
+		AddDefineSymbols(BuildTargetGroup.Android, DEFINES_PROD);
 
 		PlayerSettings.Android.useCustomKeystore = true;
 		PlayerSettings.Android.keystoreName = keystoreName;
@@ -65,5 +72,15 @@ static class JenkinsUnityAppend
 			}
 		}
 		return null;
+	}
+
+	private static void AddDefineSymbols(BuildTargetGroup targetGroup, string[] extraDefines)
+	{
+		string definesString = PlayerSettings.GetScriptingDefineSymbolsForGroup(targetGroup);
+		List<string> allDefines = definesString.Split(';').ToList();
+		allDefines.AddRange(extraDefines.Except(allDefines));
+		definesString = string.Join(";", allDefines.ToArray());
+
+		PlayerSettings.SetScriptingDefineSymbolsForGroup(targetGroup, definesString);
 	}
 }

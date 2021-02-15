@@ -1,7 +1,3 @@
-// CONFIDENTIAL
-// Copyright(c) Facebook Technologies, LLC and its affiliates. All rights reserved.
-
-using System;
 using UnityEngine;
 
 namespace HandPosing.OVRIntegration.GrabEngine
@@ -12,55 +8,55 @@ namespace HandPosing.OVRIntegration.GrabEngine
     public class PinchTriggerFlex : MonoBehaviour, FlexInterface
     {
         [SerializeField]
-        private OVRHand flexhand;
+        private OVRHand flexHand;
         [SerializeField]
-        private OVRInput.Controller controller;
+        private bool trackLowConfidenceFingers = false;
 
         [Space]
         [SerializeField]
-        [Tooltip("Grab threshold, left hand controller")]
-        private Vector2 grabThresoldController = new Vector2(0.35f, 0.55f);
-        [SerializeField]
-        [Tooltip("Grab threshold, left hand pinch")]
-        private Vector2 grabThresoldHand = new Vector2(0.35f, 0.95f);
+        [Tooltip("Grab threshold, hand pinch")]
+        private Vector2 grabThresold = new Vector2(0.35f, 0.95f);
+
 
         private const float ALMOST_PINCH_LOWER_PERCENT = 1.2f;
         private const float ALMOST_PINCH_UPPER_PERCENT = 0.75f;
 
+        private const int FINGER_COUNT = 2;
+        private float[] _pinchStrength = new float[FINGER_COUNT];
+        private static readonly OVRHand.HandFinger[] PINCHING_FINGERS = new OVRHand.HandFinger[FINGER_COUNT]
+        {
+            OVRHand.HandFinger.Index,
+            OVRHand.HandFinger.Middle
+        };
+
+
         public FlexType InterfaceFlexType => FlexType.PinchTriggerFlex;
 
-        public float GrabStrength
+
+        public bool IsValid
         {
             get
             {
-                if (flexhand
-                    && flexhand.IsTracked)
+                return flexHand
+                    && flexHand.IsTracked;
+            }
+        }
+
+        public float? GrabStrength
+        {
+            get
+            {
+                if (IsValid)
                 {
-                      return Math.Max(
-                          flexhand.GetFingerPinchStrength(OVRHand.HandFinger.Index),
-                          flexhand.GetFingerPinchStrength(OVRHand.HandFinger.Middle));
+                    return CalculateStrength();
                 }
-                else
-                {
-                    return OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger,controller);
-                }
+                return null;
             }
         }
 
         public Vector2 GrabThresold
         {
-            get
-            {
-                if (flexhand
-                    && flexhand.IsTracked)
-                {
-                    return grabThresoldHand;
-                }
-                else
-                {
-                    return grabThresoldController;
-                }
-            }
+            get => grabThresold;
         }
 
         public Vector2 FailGrabThresold
@@ -72,6 +68,38 @@ namespace HandPosing.OVRIntegration.GrabEngine
                 failThresold.y *= ALMOST_PINCH_UPPER_PERCENT;
                 return failThresold;
             }
+        }
+
+        public float AlmostGrabRelease
+        {
+            get => GrabThresold.x;
+        }
+
+        private float CalculateStrength()
+        {
+            float maxPinch = 0f;
+            for(int i = 0; i < FINGER_COUNT; i++)
+            {
+                if (CanTrackFinger(i))
+                {
+                    _pinchStrength[i] = flexHand.GetFingerPinchStrength(PINCHING_FINGERS[i]);
+                }
+                maxPinch = Mathf.Max(maxPinch, _pinchStrength[i]);
+            }
+            return maxPinch;
+        }
+
+        private bool CanTrackFinger(int fingerIndex)
+        {
+            OVRHand.HandFinger finger = PINCHING_FINGERS[fingerIndex];
+
+            if (flexHand == null
+                || !flexHand.IsDataValid
+                || (flexHand.GetFingerConfidence(finger) != OVRHand.TrackingConfidence.High && !trackLowConfidenceFingers))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

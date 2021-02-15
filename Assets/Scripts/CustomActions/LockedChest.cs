@@ -1,8 +1,5 @@
-﻿using HandPosing.Interaction;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class LockedChest : MonoBehaviour
 {
@@ -10,6 +7,8 @@ public class LockedChest : MonoBehaviour
     private Attacher key;
     [SerializeField]
     private ConfigurableJoint joint;
+
+    public UnityEvent OnUnlocked;
 
     private SoftJointLimit _lockedLimit = new SoftJointLimit()
     {
@@ -46,6 +45,7 @@ public class LockedChest : MonoBehaviour
     private void KeyAttached()
     {
         LockChest(false);
+        OnUnlocked?.Invoke();
     }
 
     private void LockChest(bool locked)

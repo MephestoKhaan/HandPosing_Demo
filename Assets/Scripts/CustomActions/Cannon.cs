@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Cannon : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Cannon : MonoBehaviour
     private AudioSource explossionSound;
     [SerializeField]
     private Collider detectorCollider;
+
+    public UnityEvent OnFired;
 
     private static readonly WaitForSeconds DETECTION_TIMEOUT = new WaitForSeconds(0.5f);
 
@@ -53,6 +56,7 @@ public class Cannon : MonoBehaviour
         _ammunition.Clear();
         explosion.ForEach(ps => ps.Play());
         explossionSound.Play();
+        OnFired?.Invoke();
     }
 
 
