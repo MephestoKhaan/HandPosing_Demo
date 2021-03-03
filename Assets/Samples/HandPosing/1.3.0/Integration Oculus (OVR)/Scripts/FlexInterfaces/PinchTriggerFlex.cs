@@ -15,7 +15,7 @@ namespace HandPosing.OVRIntegration.GrabEngine
         [Space]
         [SerializeField]
         [Tooltip("Grab threshold, hand pinch")]
-        private Vector2 grabThresold = new Vector2(0.35f, 0.95f);
+        private Vector2 grabThresold = new Vector2(0.01f, 0.9f);
 
 
         private const float ALMOST_PINCH_LOWER_PERCENT = 1.2f;
@@ -38,7 +38,7 @@ namespace HandPosing.OVRIntegration.GrabEngine
             get
             {
                 return flexHand
-                    && flexHand.IsTracked;
+                    && flexHand.IsDataValid;
             }
         }
 
@@ -80,10 +80,16 @@ namespace HandPosing.OVRIntegration.GrabEngine
             float maxPinch = 0f;
             for(int i = 0; i < FINGER_COUNT; i++)
             {
+                float rawPinch = flexHand.GetFingerPinchStrength(PINCHING_FINGERS[i]); 
                 if (CanTrackFinger(i))
                 {
-                    _pinchStrength[i] = flexHand.GetFingerPinchStrength(PINCHING_FINGERS[i]);
+                    _pinchStrength[i] = rawPinch;
                 }
+                else
+                {
+                    _pinchStrength[i] = Mathf.Max(_pinchStrength[i], rawPinch);
+                }
+
                 maxPinch = Mathf.Max(maxPinch, _pinchStrength[i]);
             }
             return maxPinch;
@@ -93,9 +99,12 @@ namespace HandPosing.OVRIntegration.GrabEngine
         {
             OVRHand.HandFinger finger = PINCHING_FINGERS[fingerIndex];
 
+
             if (flexHand == null
-                || !flexHand.IsDataValid
-                || (flexHand.GetFingerConfidence(finger) != OVRHand.TrackingConfidence.High && !trackLowConfidenceFingers))
+                || !flexHand.IsTracked
+                || (flexHand.HandConfidence != OVRHand.TrackingConfidence.High && !trackLowConfidenceFingers)
+                || (flexHand.GetFingerConfidence(finger) != OVRHand.TrackingConfidence.High && !trackLowConfidenceFingers)
+                || (flexHand.GetFingerConfidence(OVRHand.HandFinger.Thumb) != OVRHand.TrackingConfidence.High && !trackLowConfidenceFingers))
             {
                 return false;
             }
