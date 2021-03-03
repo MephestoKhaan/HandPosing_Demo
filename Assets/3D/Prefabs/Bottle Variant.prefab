@@ -57,41 +57,6 @@ CapsuleCollider:
   m_Height: 0.057251453
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.11256647}
---- !u!114 &397636468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361551109442981945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a99858afe0bf3042bcd707cde435ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posesCollection: {fileID: 11400000, guid: b60ba06d4c8d2524d91ca08735320819, type: 2}
-  ghostProvider: {fileID: 11400000, guid: 2176ff4867cf6bc4b841d3a0415b1155, type: 2}
-  StorePoses: 
-  LoadPoses: 
-  snapPoints:
-  - {fileID: 6017865148793134685}
-  - {fileID: 2241386535742335237}
-  ClearSnapPoints: 
---- !u!114 &397636469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1361551109442981945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  immovable: 0
-  _grabPoints:
-  - {fileID: 947743448022491619}
 --- !u!82 &1711029920
 AudioSource:
   m_ObjectHideFlags: 0
@@ -188,6 +153,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &397636468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361551109442981945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99858afe0bf3042bcd707cde435ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posesCollection: {fileID: 11400000, guid: b60ba06d4c8d2524d91ca08735320819, type: 2}
+  ghostProvider: {fileID: 11400000, guid: 2176ff4867cf6bc4b841d3a0415b1155, type: 2}
+  StorePoses: 
+  LoadPoses: 
+  snapPoints:
+  - {fileID: 6017865148793134685}
+  - {fileID: 2241386535742335237}
+  ClearSnapPoints: 
+--- !u!114 &397636469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361551109442981945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a0500daeaec005478651a4881d410fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immovable: 0
+  _grabPoints:
+  - {fileID: 947743448022491619}
 --- !u!114 &1711029919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,8 +228,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7341129056109337665}
-  m_LocalRotation: {x: 0.24767236, y: -0.32383242, z: -0.75007355, w: -0.5207501}
-  m_LocalPosition: {x: -0.054745063, y: -0.029136209, z: 0.009311391}
+  m_LocalRotation: {x: 0.31210312, y: -0.3679865, z: -0.7256332, w: -0.49054462}
+  m_LocalPosition: {x: -0.054745115, y: -0.02913618, z: 0.0093114}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1850666265204689539}
@@ -252,8 +252,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: -0.054745086, y: -0.029136062, z: 0.009311486}
-      rotation: {x: 0.24767253, y: -0.3238326, z: -0.7500739, w: -0.5207503}
+      position: {x: -0.054745115, y: -0.02913618, z: 0.0093114}
+      rotation: {x: 0.31210312, y: -0.3679865, z: -0.7256332, w: -0.49054462}
     handeness: 1
     _bones:
     - boneID: 2
@@ -348,8 +348,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8964283165685385132}
-  m_LocalRotation: {x: 0.45805293, y: -0.11302634, z: 0.777634, w: 0.41556925}
-  m_LocalPosition: {x: -0.0547451, y: -0.02913618, z: 0.009311458}
+  m_LocalRotation: {x: 0.5240853, y: -0.14881551, z: 0.73475295, w: 0.40413705}
+  m_LocalPosition: {x: -0.054745093, y: -0.02913618, z: 0.0093114525}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1850666265204689539}
@@ -372,8 +372,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: -0.054745097, y: -0.02913624, z: 0.009311458}
-      rotation: {x: 0.4580529, y: -0.11302637, z: 0.77763397, w: 0.4155692}
+      position: {x: -0.054745093, y: -0.02913618, z: 0.0093114525}
+      rotation: {x: 0.5240853, y: -0.14881551, z: 0.73475295, w: 0.40413705}
     handeness: 0
     _bones:
     - boneID: 2
@@ -509,7 +509,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d73f8afe478afde498d6b36047a52c73, type: 2}
+      objectReference: {fileID: 2100000, guid: cec2255ab2e23a04ca89c8464bde3e29, type: 2}
     - target: {fileID: 919132149155446097, guid: afdf382598093b641887917a146c40fe,
         type: 3}
       propertyPath: m_Name

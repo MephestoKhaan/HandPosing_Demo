@@ -25,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176675486888967670}
-  m_LocalRotation: {x: -0.38215515, y: 0.6297648, z: 0.57530576, w: -0.3554955}
+  m_LocalRotation: {x: -0.3305597, y: 0.65835184, z: 0.6064236, w: -0.29925507}
   m_LocalPosition: {x: -0.43336353, y: -0.22410637, z: 0.019199967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -50,7 +50,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: -0.43336353, y: -0.22410637, z: 0.019199967}
-      rotation: {x: -0.38215515, y: 0.6297648, z: 0.57530576, w: -0.3554955}
+      rotation: {x: -0.3305597, y: 0.65835184, z: 0.6064236, w: -0.29925507}
     handeness: 0
     _bones:
     - boneID: 2
@@ -102,7 +102,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &2923778217594473964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,8 +145,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368780157862816227}
-  m_LocalRotation: {x: 0.35431477, y: 0.64583844, z: 0.59552103, w: 0.32048166}
-  m_LocalPosition: {x: 0.0226, y: 0.48735702, z: 0.0192}
+  m_LocalRotation: {x: 0.40486956, y: 0.61544895, z: 0.56237435, w: 0.37555063}
+  m_LocalPosition: {x: 0.02260001, y: 0.48735702, z: 0.019199967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2181667089464198528}
@@ -169,8 +169,8 @@ MonoBehaviour:
   slideThresold: 0.95
   pose:
     relativeGrip:
-      position: {x: 0.0226, y: 0.48735702, z: 0.0192}
-      rotation: {x: 0.35431477, y: 0.64583844, z: 0.59552103, w: 0.32048166}
+      position: {x: 0.02260001, y: 0.48735702, z: 0.019199967}
+      rotation: {x: 0.40486956, y: 0.61544895, z: 0.56237435, w: 0.37555063}
     handeness: 0
     _bones:
     - boneID: 2
@@ -222,7 +222,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &812769997512028782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,8 +408,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495583579139889615}
-  m_LocalRotation: {x: 0.0020149602, y: 0.31454566, z: 0.6929502, w: -0.64875036}
-  m_LocalPosition: {x: 0.0033, y: 0.48735672, z: 0.0225}
+  m_LocalRotation: {x: -0.058387265, y: 0.25680646, z: 0.69048893, w: -0.67369616}
+  m_LocalPosition: {x: 0.0032999963, y: 0.48735678, z: 0.022500038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2181667089464198528}
@@ -432,8 +432,8 @@ MonoBehaviour:
   slideThresold: 0.95
   pose:
     relativeGrip:
-      position: {x: 0.0033, y: 0.48735672, z: 0.0225}
-      rotation: {x: 0.0020149602, y: 0.31454566, z: 0.6929502, w: -0.64875036}
+      position: {x: 0.0032999963, y: 0.48735678, z: 0.022500038}
+      rotation: {x: -0.058387265, y: 0.25680646, z: 0.69048893, w: -0.67369616}
     handeness: 1
     _bones:
     - boneID: 2
@@ -485,7 +485,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &2511548172497837358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,7 +528,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641077146118158530}
-  m_LocalRotation: {x: -0.31454566, y: 0.0020149602, z: -0.64875036, w: -0.6929502}
+  m_LocalRotation: {x: -0.25680643, y: -0.058387265, z: -0.6736961, w: -0.6904889}
   m_LocalPosition: {x: -0.0032999963, y: -0.48735678, z: 0.022500038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -553,7 +553,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: -0.0032999963, y: -0.48735678, z: 0.022500038}
-      rotation: {x: -0.31454566, y: 0.0020149602, z: -0.64875036, w: -0.6929502}
+      rotation: {x: -0.25680643, y: -0.058387265, z: -0.6736961, w: -0.6904889}
     handeness: 1
     _bones:
     - boneID: 2
@@ -605,7 +605,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &3403055242807159901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,6 +711,106 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.32497385, y: 0.121337846, z: 0.09210959}
   m_Center: {x: 0, y: 0.30001023, z: 0.0023422688}
+--- !u!54 &42056129
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230427805650430549}
+  serializedVersion: 2
+  m_Mass: 2
+  m_Drag: 2
+  m_AngularDrag: 2
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
+--- !u!59 &42056128
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230427805650430549}
+  m_ConnectedBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0.246, y: 1.018, z: 1.3600451}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    bounciness: 0
+    bounceMinVelocity: 0.2
+    contactDistance: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
+--- !u!114 &42056125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230427805650430549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99858afe0bf3042bcd707cde435ac8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posesCollection: {fileID: 11400000, guid: cb8142d45f34cc74c9237d858ca9c9ec, type: 2}
+  ghostProvider: {fileID: 11400000, guid: 2176ff4867cf6bc4b841d3a0415b1155, type: 2}
+  StorePoses: 
+  LoadPoses: 
+  snapPoints:
+  - {fileID: 747916328048589138}
+  - {fileID: 4313058730111457721}
+  - {fileID: 7287772708186725235}
+  - {fileID: 4103196464509989776}
+  - {fileID: 2841902524792521967}
+  - {fileID: 2489613551949782399}
+  - {fileID: 2788915716440484973}
+  - {fileID: 3065051646865780022}
+  - {fileID: 2228835710319916024}
+  - {fileID: 7012610735248633545}
+  - {fileID: 4290981342795388513}
+  - {fileID: 7252631234237808080}
+  ClearSnapPoints: 
+--- !u!114 &42056127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230427805650430549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immovable: 0
+  _grabPoints:
+  - {fileID: 4406696499436767219}
+  - {fileID: 1371500649483198307}
+  - {fileID: 5070796265716375755}
+  customJoint: {fileID: 1754454855051732502}
+  multiGrab: 1
 --- !u!1 &1469294444718950316
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +836,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469294444718950316}
-  m_LocalRotation: {x: -0.27139708, y: 0.15901782, z: -0.21535927, w: -0.92448765}
+  m_LocalRotation: {x: -0.25159454, y: 0.07783827, z: -0.23819357, w: -0.934829}
   m_LocalPosition: {x: -0.42371333, y: -0.24082053, z: 0.022500038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -761,7 +861,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: -0.42371333, y: -0.24082053, z: 0.022500038}
-      rotation: {x: -0.27139708, y: 0.15901782, z: -0.21535927, w: -0.92448765}
+      rotation: {x: -0.25159454, y: 0.07783827, z: -0.23819357, w: -0.934829}
     handeness: 1
     _bones:
     - boneID: 2
@@ -813,7 +913,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &3107991913318143173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,7 +956,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548950946224303979}
-  m_LocalRotation: {x: -0.64583844, y: 0.35431477, z: 0.32048166, w: -0.59552103}
+  m_LocalRotation: {x: -0.61544895, y: 0.40486956, z: 0.37555063, w: -0.56237435}
   m_LocalPosition: {x: -0.02260001, y: -0.48735702, z: 0.019199967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -881,7 +981,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: -0.02260001, y: -0.48735702, z: 0.019199967}
-      rotation: {x: -0.64583844, y: 0.35431477, z: 0.32048166, w: -0.59552103}
+      rotation: {x: -0.61544895, y: 0.40486956, z: 0.37555063, w: -0.56237435}
     handeness: 0
     _bones:
     - boneID: 2
@@ -933,7 +1033,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &6053748061258707397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1020,7 +1120,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3372437310835178944}
-  m_LocalRotation: {x: -0.15552785, y: 0.27341202, z: 0.2757373, w: -0.9083094}
+  m_LocalRotation: {x: -0.17896812, y: 0.1932072, z: 0.26113287, w: -0.92868245}
   m_LocalPosition: {x: -0.42041335, y: 0.24653625, z: 0.022500038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1045,7 +1145,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: -0.42041335, y: 0.24653625, z: 0.022500038}
-      rotation: {x: -0.15552785, y: 0.27341202, z: 0.2757373, w: -0.9083094}
+      rotation: {x: -0.17896812, y: 0.1932072, z: 0.26113287, w: -0.92868245}
     handeness: 1
     _bones:
     - boneID: 2
@@ -1097,7 +1197,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &932607066467563351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,6 +1215,19 @@ MonoBehaviour:
     startPoint: {x: -0.43819696, y: 0.25337481, z: 0.0029549599}
     endPoint: {x: -0.40596274, y: 0.23503911, z: 0.0029549599}
     angle: 360
+--- !u!65 &1367830008932044097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748663903497965226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.35005793, y: 1.1188986, z: 0.1905425}
+  m_Center: {x: 0, y: -0.4641781, z: 0}
 --- !u!1 &3935827219123929855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1521,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5742382219685784841}
-  m_LocalRotation: {x: -0.73646986, y: -0.016073644, z: -0.020215273, w: -0.6759772}
+  m_LocalRotation: {x: -0.7354292, y: 0.042902846, z: 0.044049263, w: -0.67480576}
   m_LocalPosition: {x: 0.41076356, y: -0.2632507, z: 0.019199967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1433,7 +1546,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: 0.41076356, y: -0.2632507, z: 0.019199967}
-      rotation: {x: -0.73646986, y: -0.016073644, z: -0.020215273, w: -0.6759772}
+      rotation: {x: -0.7354292, y: 0.042902846, z: 0.044049263, w: -0.67480576}
     handeness: 0
     _bones:
     - boneID: 2
@@ -1485,7 +1598,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &3380389247245453108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1528,7 +1641,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5999084271730645083}
-  m_LocalRotation: {x: -0.15901785, y: -0.27139708, z: -0.92448765, w: 0.2153592}
+  m_LocalRotation: {x: -0.07783829, y: -0.25159454, z: -0.93482906, w: 0.23819351}
   m_LocalPosition: {x: 0.4237134, y: 0.24082053, z: 0.022500038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1553,7 +1666,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: 0.4237134, y: 0.24082053, z: 0.022500038}
-      rotation: {x: -0.15901785, y: -0.27139708, z: -0.92448765, w: 0.2153592}
+      rotation: {x: -0.07783829, y: -0.25159454, z: -0.93482906, w: 0.23819351}
     handeness: 1
     _bones:
     - boneID: 2
@@ -1605,7 +1718,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &442327641728307596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,125 +1781,6 @@ CapsuleCollider:
   m_Height: 0.15
   m_Direction: 1
   m_Center: {x: 0.0006286651, y: 0.48, z: 0}
---- !u!65 &1367830008932044097
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3748663903497965226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.35005793, y: 1.1188986, z: 0.1905425}
-  m_Center: {x: 0, y: -0.4641781, z: 0}
---- !u!54 &42056129
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230427805650430549}
-  serializedVersion: 2
-  m_Mass: 2
-  m_Drag: 2
-  m_AngularDrag: 2
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 0
---- !u!59 &42056128
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230427805650430549}
-  m_ConnectedBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: 0, z: 1}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.246, y: 1.018, z: 1.3600451}
-  m_UseSpring: 0
-  m_Spring:
-    spring: 0
-    damper: 0
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
-    max: 0
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!114 &42056125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230427805650430549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a99858afe0bf3042bcd707cde435ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posesCollection: {fileID: 11400000, guid: cb8142d45f34cc74c9237d858ca9c9ec, type: 2}
-  ghostProvider: {fileID: 11400000, guid: 2176ff4867cf6bc4b841d3a0415b1155, type: 2}
-  StorePoses: 
-  LoadPoses: 
-  snapPoints:
-  - {fileID: 747916328048589138}
-  - {fileID: 4313058730111457721}
-  - {fileID: 7287772708186725235}
-  - {fileID: 4103196464509989776}
-  - {fileID: 2841902524792521967}
-  - {fileID: 2489613551949782399}
-  - {fileID: 2788915716440484973}
-  - {fileID: 3065051646865780022}
-  - {fileID: 2228835710319916024}
-  - {fileID: 7012610735248633545}
-  - {fileID: 4290981342795388513}
-  - {fileID: 7252631234237808080}
-  ClearSnapPoints: 
---- !u!114 &42056127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1230427805650430549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  immovable: 0
-  _grabPoints:
-  - {fileID: 4406696499436767219}
-  - {fileID: 1371500649483198307}
-  - {fileID: 5070796265716375755}
-  - {fileID: 1939663796801353886}
-  - {fileID: 3557789923011078089}
-  - {fileID: 8111721277419143404}
-  - {fileID: 6336857119237920762}
-  - {fileID: 1316023168856977374}
-  - {fileID: 6958440878550588129}
-  customJoint: {fileID: 1754454855051732502}
-  multiGrab: 1
 --- !u!1 &6276508198130105381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,7 +1851,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6474262351646453962}
-  m_LocalRotation: {x: -0.62976485, y: -0.38215506, z: -0.35549554, w: -0.57530576}
+  m_LocalRotation: {x: -0.65835184, y: -0.3305596, z: -0.29925507, w: -0.6064236}
   m_LocalPosition: {x: 0.43336356, y: 0.22410631, z: 0.019199967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1882,7 +1876,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: 0.43336356, y: 0.22410631, z: 0.019199967}
-      rotation: {x: -0.62976485, y: -0.38215506, z: -0.35549554, w: -0.57530576}
+      rotation: {x: -0.65835184, y: -0.3305596, z: -0.29925507, w: -0.6064236}
     handeness: 0
     _bones:
     - boneID: 2
@@ -1934,7 +1928,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &2859187319806203036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,7 +2164,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8104436477726636406}
-  m_LocalRotation: {x: -0.016073644, y: 0.73646986, z: 0.6759772, w: -0.020215273}
+  m_LocalRotation: {x: 0.042902846, y: 0.7354292, z: 0.67480576, w: 0.044049263}
   m_LocalPosition: {x: -0.41076356, y: 0.2632507, z: 0.019199967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2195,7 +2189,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: -0.41076356, y: 0.2632507, z: 0.019199967}
-      rotation: {x: -0.016073644, y: 0.73646986, z: 0.6759772, w: -0.020215273}
+      rotation: {x: 0.042902846, y: 0.7354292, z: 0.67480576, w: 0.044049263}
     handeness: 0
     _bones:
     - boneID: 2
@@ -2247,7 +2241,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &5366881914873067246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2335,7 +2329,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9178602706295365824}
-  m_LocalRotation: {x: -0.27341202, y: -0.15552785, z: -0.9083094, w: -0.2757373}
+  m_LocalRotation: {x: -0.1932072, y: -0.17896812, z: -0.92868245, w: -0.26113287}
   m_LocalPosition: {x: 0.42041337, y: -0.24653625, z: 0.022500038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2360,7 +2354,7 @@ MonoBehaviour:
   pose:
     relativeGrip:
       position: {x: 0.42041337, y: -0.24653625, z: 0.022500038}
-      rotation: {x: -0.27341202, y: -0.15552785, z: -0.9083094, w: -0.2757373}
+      rotation: {x: -0.1932072, y: -0.17896812, z: -0.92868245, w: -0.26113287}
     handeness: 1
     _bones:
     - boneID: 2
@@ -2412,7 +2406,7 @@ MonoBehaviour:
   ghost: {fileID: 0}
   CreateMirror: 
   maxDistance: 0.1
-  positionRotationWeight: 0
+  positionRotationWeight: 0.9
 --- !u!114 &6210646427134128239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2505,7 +2499,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e7471bb81243adb45aeedb14b66ca049,
         type: 3}
       propertyPath: m_Name
-      value: ShipsWheel Variant
+      value: ShipsWheel
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e7471bb81243adb45aeedb14b66ca049,
         type: 3}
@@ -2524,12 +2518,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7471bb81243adb45aeedb14b66ca049, type: 3}
---- !u!1 &1230427805650430549 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5166472433167707696, guid: e7471bb81243adb45aeedb14b66ca049,
-    type: 3}
-  m_PrefabInstance: {fileID: 6242451840445809765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3748663903497965226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2115485478020789553, guid: e7471bb81243adb45aeedb14b66ca049,
@@ -2539,6 +2527,12 @@ GameObject:
 --- !u!4 &2181667089464198528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5253293347135357413, guid: e7471bb81243adb45aeedb14b66ca049,
+    type: 3}
+  m_PrefabInstance: {fileID: 6242451840445809765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1230427805650430549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5166472433167707696, guid: e7471bb81243adb45aeedb14b66ca049,
     type: 3}
   m_PrefabInstance: {fileID: 6242451840445809765}
   m_PrefabAsset: {fileID: 0}

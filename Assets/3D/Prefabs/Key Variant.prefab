@@ -153,6 +153,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &791368333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2871509286506769061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ac296f69912cd428a1b4bc51ed5456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attach: {fileID: 0}
+  updateOffset: 
+  offset:
+    position: {x: 0.010090809, y: 0.13611934, z: 0.35180044}
+    rotation: {x: 0, y: 0.031498328, z: 0, w: 0.9995039}
+  canReattach: 1
+  reattachDistance: 0.2
+  reattachRotation: 0.95
+  rotationAxisSelf: {x: 0, y: 0, z: 1}
+  rotationAxisTo: {x: 0, y: 0, z: 1}
 --- !u!114 &1285316563707913361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,28 +226,6 @@ MonoBehaviour:
   _grabPoints: []
   customJoint: {fileID: 0}
   multiGrab: 0
---- !u!114 &791368333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2871509286506769061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5ac296f69912cd428a1b4bc51ed5456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attach: {fileID: 0}
-  updateOffset: 
-  offset:
-    position: {x: 0.010090809, y: 0.13611934, z: 0.35180044}
-    rotation: {x: 0, y: 0.031498328, z: 0, w: 0.9995039}
-  canReattach: 1
-  reattachDistance: 0.2
-  reattachRotation: 0.95
-  rotationAxisSelf: {x: 0, y: 0, z: 1}
-  rotationAxisTo: {x: 0, y: 0, z: 1}
 --- !u!1 &7342780387087589271
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,8 +250,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7342780387087589271}
-  m_LocalRotation: {x: 0.5762994, y: 0.80355173, z: 0.09868501, w: 0.11155668}
-  m_LocalPosition: {x: 0.011, y: 0.0039, z: 0.0647}
+  m_LocalRotation: {x: 0.5827074, y: 0.7907711, z: 0.04808166, w: 0.18116635}
+  m_LocalPosition: {x: 0.011000001, y: 0.0038999934, z: 0.06470007}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3211760154182217759}
@@ -274,8 +274,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: 0.010999987, y: 0.0038998816, z: 0.06469997}
-      rotation: {x: 0.5762997, y: 0.80355203, z: 0.098684885, w: 0.111556545}
+      position: {x: 0.011000001, y: 0.0038999934, z: 0.06470007}
+      rotation: {x: 0.5827074, y: 0.7907711, z: 0.04808166, w: 0.18116635}
     handeness: 0
     _bones:
     - boneID: 2
@@ -352,8 +352,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8576150671775782424}
-  m_LocalRotation: {x: -0.5310195, y: 0.8284458, z: 0.12382339, w: -0.12792052}
-  m_LocalPosition: {x: -0.0089, y: 0.0046, z: 0.069}
+  m_LocalRotation: {x: -0.53979075, y: 0.81414425, z: 0.07707083, w: -0.19963756}
+  m_LocalPosition: {x: -0.008899994, y: 0.004599996, z: 0.068999976}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3211760154182217759}
@@ -376,8 +376,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: -0.008899945, y: 0.004599956, z: 0.0690001}
-      rotation: {x: -0.53101945, y: 0.82844573, z: 0.12382347, w: -0.12792036}
+      position: {x: -0.008899994, y: 0.004599996, z: 0.068999976}
+      rotation: {x: -0.53979075, y: 0.81414425, z: 0.07707083, w: -0.19963756}
     handeness: 1
     _bones:
     - boneID: 2

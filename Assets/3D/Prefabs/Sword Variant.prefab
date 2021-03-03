@@ -252,42 +252,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11879258, y: 0.032174006, z: 0.14787626}
   m_Center: {x: 0.0014812127, y: -0.09138032, z: -0.5634551}
---- !u!114 &8012338230151295082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5635339425281422247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a99858afe0bf3042bcd707cde435ac8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posesCollection: {fileID: 11400000, guid: 1aeda36b38fe4e54994de8d47f61ea44, type: 2}
-  ghostProvider: {fileID: 11400000, guid: 2176ff4867cf6bc4b841d3a0415b1155, type: 2}
-  StorePoses: 
-  LoadPoses: 
-  snapPoints:
-  - {fileID: 6300477408269708127}
-  - {fileID: 2568551466796235160}
-  ClearSnapPoints: 
---- !u!114 &8012338230151295083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5635339425281422247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  immovable: 0
-  _grabPoints: []
-  customJoint: {fileID: 0}
-  multiGrab: 0
 --- !u!82 &7321824995500933739
 AudioSource:
   m_ObjectHideFlags: 0
@@ -385,6 +349,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5099159203412587374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635339425281422247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccefaeb1241d4894d8db26e2fd049299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 11400000, guid: c3c493cae58fc8b4ca0f92f8e223d980, type: 2}
+  velocityFactor: 0.1
+  velocityThresold: 0.5
 --- !u!114 &5501794274813972342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,7 +386,7 @@ MonoBehaviour:
   reattachRotation: 0.8
   rotationAxisSelf: {x: 0, y: 0, z: 1}
   rotationAxisTo: {x: 0, y: 0, z: 1}
---- !u!114 &5099159203412587374
+--- !u!114 &8012338230151295082
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,12 +395,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 5635339425281422247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccefaeb1241d4894d8db26e2fd049299, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a99858afe0bf3042bcd707cde435ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 11400000, guid: c3c493cae58fc8b4ca0f92f8e223d980, type: 2}
-  velocityFactor: 0.1
-  velocityThresold: 0.5
+  posesCollection: {fileID: 11400000, guid: 1aeda36b38fe4e54994de8d47f61ea44, type: 2}
+  ghostProvider: {fileID: 11400000, guid: 2176ff4867cf6bc4b841d3a0415b1155, type: 2}
+  StorePoses: 
+  LoadPoses: 
+  snapPoints:
+  - {fileID: 6300477408269708127}
+  - {fileID: 2568551466796235160}
+  ClearSnapPoints: 
+--- !u!114 &8012338230151295083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5635339425281422247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd2fa2bd22c944846b34678beaf51089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  immovable: 0
+  _grabPoints: []
+  customJoint: {fileID: 0}
+  multiGrab: 0
 --- !u!1 &6473141562643333810
 GameObject:
   m_ObjectHideFlags: 0

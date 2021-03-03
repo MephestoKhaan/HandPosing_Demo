@@ -25,8 +25,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427175034}
-  m_LocalRotation: {x: -0.073653124, y: -0.8862367, z: -0.43835038, w: -0.13041732}
-  m_LocalPosition: {x: -0.16036473, y: 0.06521247, z: 0.515116}
+  m_LocalRotation: {x: -0.03516807, y: -0.89423096, z: -0.44310158, w: -0.05268041}
+  m_LocalPosition: {x: -0.16036478, y: 0.06521246, z: 0.515116}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6694962014036742276}
@@ -49,8 +49,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: -0.16036473, y: 0.06521247, z: 0.515116}
-      rotation: {x: -0.073653124, y: -0.8862367, z: -0.43835038, w: -0.13041732}
+      position: {x: -0.16036478, y: 0.06521246, z: 0.515116}
+      rotation: {x: -0.03516807, y: -0.89423096, z: -0.44310158, w: -0.05268041}
     handeness: 1
     _bones:
     - boneID: 2
@@ -291,8 +291,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651374593}
-  m_LocalRotation: {x: 0.03611594, y: 0.90039235, z: 0.42728463, w: -0.07360063}
-  m_LocalPosition: {x: -0.16036478, y: 0.06521246, z: 0.51511604}
+  m_LocalRotation: {x: 0.073218815, y: 0.9033809, z: 0.42251095, w: 0.0051538204}
+  m_LocalPosition: {x: -0.16036475, y: 0.06521246, z: 0.51511604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6694962014036742276}
@@ -315,8 +315,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: -0.16036478, y: 0.06521246, z: 0.51511604}
-      rotation: {x: 0.03611594, y: 0.90039235, z: 0.42728463, w: -0.07360063}
+      position: {x: -0.16036475, y: 0.06521246, z: 0.51511604}
+      rotation: {x: 0.073218815, y: 0.9033809, z: 0.42251095, w: 0.0051538204}
     handeness: 0
     _bones:
     - boneID: 2
@@ -913,7 +913,7 @@ PrefabInstance:
     - target: {fileID: -7221990737365394855, guid: 200d82559720db94cbf6e7358729df1d,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: -7203734199802200066, guid: 200d82559720db94cbf6e7358729df1d,
         type: 3}

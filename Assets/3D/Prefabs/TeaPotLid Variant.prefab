@@ -25,8 +25,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3833961120547880405}
-  m_LocalRotation: {x: 0.02346804, y: -0.64030373, z: 0.18466426, w: 0.7452245}
-  m_LocalPosition: {x: 0.0136, y: 0.153, z: -0.0484}
+  m_LocalRotation: {x: 0.039473318, y: -0.7028178, z: 0.18191619, w: 0.6865825}
+  m_LocalPosition: {x: 0.013599989, y: 0.15300006, z: -0.04839998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6018195142427328205}
@@ -49,8 +49,8 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: 0.01360002, y: 0.15299994, z: -0.048399962}
-      rotation: {x: 0.023468014, y: -0.64030373, z: 0.18466425, w: 0.74522454}
+      position: {x: 0.013599989, y: 0.15300006, z: -0.04839998}
+      rotation: {x: 0.039473318, y: -0.7028178, z: 0.18191619, w: 0.6865825}
     handeness: 0
     _bones:
     - boneID: 2
@@ -145,8 +145,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4829169031560990326}
-  m_LocalRotation: {x: -0.022383913, y: -0.33743912, z: 0.19700903, w: -0.9202289}
-  m_LocalPosition: {x: 0.0187, y: 0.1495, z: -0.0479}
+  m_LocalRotation: {x: -0.039469223, y: -0.41635835, z: 0.19430849, w: -0.8873174}
+  m_LocalPosition: {x: 0.01870003, y: 0.14949995, z: -0.04790004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6018195142427328205}
@@ -169,12 +169,12 @@ MonoBehaviour:
   slideThresold: 0
   pose:
     relativeGrip:
-      position: {x: 0.018700074, y: 0.14949995, z: -0.04790001}
-      rotation: {x: -0.022383908, y: -0.33743924, z: 0.19700909, w: -0.9202291}
+      position: {x: 0.01870003, y: 0.14949995, z: -0.04790004}
+      rotation: {x: -0.039469223, y: -0.41635835, z: 0.19430849, w: -0.8873174}
     handeness: 1
     _bones:
     - boneID: 2
-      rotation: {x: -0.34464946, y: 0.4397641, z: -0.035089683, w: -0.8286091}
+      rotation: {x: -0.3446495, y: 0.43976414, z: -0.035089698, w: -0.82860917}
       position: {x: 0, y: 0, z: 0}
     - boneID: 4
       rotation: {x: -0.08307496, y: 0.06273114, z: -0.086613834, w: 0.9907883}
