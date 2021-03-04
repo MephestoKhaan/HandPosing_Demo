@@ -4,8 +4,6 @@ using UnityEditor;
 
 static class JenkinsUnityAppend
 {
-	public static readonly string APP_ID_RELEASE = "com.mefistofiles.handposing_techdemo";
-
 	public static readonly string[] DEFINES_PROD = new string[] {
 		"ANALYTICS_PROD",
 	};
@@ -18,7 +16,8 @@ static class JenkinsUnityAppend
 			keyaliasName: GetArg("-keyalias"),
 			keyaliasPass: GetArg("-keyaliaspass"),
 			buildNumber: GetArg("-buildnumber"),
-			name: GetArg("-apkname"));
+			name: GetArg("-apkname"),
+			appID: GetArg("-appid"));
 	}
 
 	private static void BuildAndroid(string buildNumber,
@@ -26,7 +25,8 @@ static class JenkinsUnityAppend
 		string keystorepass,
 		string keyaliasName,
 		string keyaliasPass, 
-		string name)
+		string name,
+		string appID)
 	{
 		PlayerSettings.Android.bundleVersionCode = int.Parse(buildNumber);
 
@@ -35,7 +35,7 @@ static class JenkinsUnityAppend
         EditorUserBuildSettings.exportAsGoogleAndroidProject = false;
         EditorUserBuildSettings.development = false;
 		PlayerSettings.Android.useAPKExpansionFiles = false;
-		PlayerSettings.applicationIdentifier = APP_ID_RELEASE;
+		PlayerSettings.applicationIdentifier = appID;
 
 		AddDefineSymbols(BuildTargetGroup.Android, DEFINES_PROD);
 
