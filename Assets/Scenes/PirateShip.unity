@@ -866,7 +866,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.8
   snapDegrees: 45
-  directioner: {fileID: 915692329}
+  leftDirectioner: {fileID: 1422139444}
+  rightDirectioner: {fileID: 1578425378}
 --- !u!1 &131012798
 GameObject:
   m_ObjectHideFlags: 0

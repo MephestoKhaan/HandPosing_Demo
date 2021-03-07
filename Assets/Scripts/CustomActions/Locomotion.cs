@@ -7,9 +7,13 @@ public class Locomotion : MonoBehaviour
     private float moveSpeed = 10f;
     [SerializeField]
     private float snapDegrees = 45f;
+    [SerializeField]
+    private float deathZone = 0.1f;
 
     [SerializeField]
-    private Transform directioner;
+    private Transform leftDirectioner;
+    [SerializeField]
+    private Transform rightDirectioner;
 
     private int _navLayer;
     private bool _snapped;
@@ -21,14 +25,17 @@ public class Locomotion : MonoBehaviour
 
     void Update()
     {
-        UpdateMove();
-        UpdateRotation();
+        if(!UpdateMove(leftDirectioner, OVRInput.Controller.LTouch))
+        {
+            UpdateMove(rightDirectioner, OVRInput.Controller.RTouch);
+        }
+        //UpdateRotation();
     }
 
-    private void UpdateMove()
+    private bool UpdateMove(Transform directioner, OVRInput.Controller controller)
     {
-        Vector2 move = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.LTouch);
-        if (move.sqrMagnitude > 0)
+        Vector2 move = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, controller);
+        if (move.magnitude > deathZone)
         {
             Quaternion direction = Quaternion.LookRotation(Vector3.ProjectOnPlane(directioner.forward, Vector3.up), Vector3.up);
             Vector3 offset = new Vector3(move.x, 0f, move.y) * Time.deltaTime * moveSpeed;
@@ -37,8 +44,10 @@ public class Locomotion : MonoBehaviour
             if (NavMesh.SamplePosition(targetPosition, out NavMeshHit hit, 0.5f, _navLayer))
             {
                 this.transform.position = hit.position;
+                return true;
             }
         }
+        return false;
     }
 
     private void UpdateRotation()
