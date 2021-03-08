@@ -866,6 +866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.8
   snapDegrees: 45
+  deathZone: 0.1
   leftDirectioner: {fileID: 1422139444}
   rightDirectioner: {fileID: 1578425378}
 --- !u!1 &131012798
@@ -2146,6 +2147,7 @@ GameObject:
   - component: {fileID: 479991098}
   - component: {fileID: 479991101}
   - component: {fileID: 479991097}
+  - component: {fileID: 479991102}
   m_Layer: 11
   m_Name: OVRHandPrefab
   m_TagString: Untagged
@@ -2213,8 +2215,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skeletonType: 1
   _updateRootPose: 0
-  _updateRootScale: 0
-  _enablePhysicsCapsules: 0
+  _updateRootScale: 1
+  _enablePhysicsCapsules: 1
 --- !u!4 &479991100
 Transform:
   m_ObjectHideFlags: 0
@@ -2242,6 +2244,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapee: {fileID: 479991097}
+--- !u!114 &479991102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479991095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de2c4dd6d90d6434385812cab7bed050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabber: {fileID: 1788163786}
+  disableRest: 1
 --- !u!1001 &487511930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6759,6 +6775,7 @@ GameObject:
   - component: {fileID: 1171957571}
   - component: {fileID: 1171957574}
   - component: {fileID: 1171957570}
+  - component: {fileID: 1171957575}
   m_Layer: 11
   m_Name: OVRHandPrefab
   m_TagString: Untagged
@@ -6826,8 +6843,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skeletonType: 0
   _updateRootPose: 0
-  _updateRootScale: 0
-  _enablePhysicsCapsules: 0
+  _updateRootScale: 1
+  _enablePhysicsCapsules: 1
 --- !u!4 &1171957573
 Transform:
   m_ObjectHideFlags: 0
@@ -6855,6 +6872,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrapee: {fileID: 1171957570}
+--- !u!114 &1171957575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171957568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de2c4dd6d90d6434385812cab7bed050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabber: {fileID: 1360929318}
+  disableRest: 1
 --- !u!1 &1178705144
 GameObject:
   m_ObjectHideFlags: 0
@@ -7647,10 +7678,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1054686201, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
+      propertyPath: grabThresold.y
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1054686202, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
       propertyPath: flexHand
       value: 
       objectReference: {fileID: 1171957569}
+    - target: {fileID: 1533762323, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
+      propertyPath: flexHand
+      value: 
+      objectReference: {fileID: 1171957569}
+    - target: {fileID: 1533762323, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
+      propertyPath: skeleton
+      value: 
+      objectReference: {fileID: 1171957572}
+    - target: {fileID: 1533762323, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
+      propertyPath: fingersToIgnore.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1533762323, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
+      propertyPath: fingersToIgnore.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 351404503943155359, guid: 886cb81ddb5a38541bfc87cbb5fabfd5,
         type: 3}
       propertyPath: m_Enabled
@@ -8445,7 +8496,7 @@ PrefabInstance:
         type: 3}
       propertyPath: flexInterfaces.Array.data[0]
       value: 
-      objectReference: {fileID: 1360929320}
+      objectReference: {fileID: 1360929324}
     - target: {fileID: 4635681503502107842, guid: 886cb81ddb5a38541bfc87cbb5fabfd5,
         type: 3}
       propertyPath: flexInterfaces.Array.data[1]
@@ -8482,53 +8533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51eb3b5203579b848804c98dd1571c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1360929320
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360929316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff700274dab95c4db2b4c071444c45d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sphereFlex: {fileID: 1360929321}
-  pinchFlex: {fileID: 1360929322}
---- !u!114 &1360929321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360929316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c2ece6cd8d708147bd52ae64e1e6070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flexHand: {fileID: 1171957569}
-  skeleton: {fileID: 1171957572}
-  fingerTipRadius: 0.01
-  poseVolumeRadius: 0.07
-  poseVolumeOffset: {x: -0.07, y: 0.03, z: 0}
-  trackLowConfidenceHands: 0
-  trackLowConfidenceFingers: 0
-  fingersToIgnore: 04000000
-  grabThresoldHand: {x: 0.25, y: 0.75}
---- !u!114 &1360929322 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1054686202, guid: 886cb81ddb5a38541bfc87cbb5fabfd5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1360929313}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360929316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d49bdd7f015ce34ebcef4318edda787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1360929323 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1054686201, guid: 886cb81ddb5a38541bfc87cbb5fabfd5,
@@ -8539,6 +8543,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a4ecd3b02b31374aae9ae1f9041266d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1360929324 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1533762322, guid: 886cb81ddb5a38541bfc87cbb5fabfd5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1360929313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360929316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff700274dab95c4db2b4c071444c45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1360929330
@@ -12007,6 +12023,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 796815804, guid: 23b1fe0762145904ba4ff0b82e7de514, type: 3}
+      propertyPath: flexHand
+      value: 
+      objectReference: {fileID: 479991096}
+    - target: {fileID: 796815804, guid: 23b1fe0762145904ba4ff0b82e7de514, type: 3}
+      propertyPath: skeleton
+      value: 
+      objectReference: {fileID: 479991099}
+    - target: {fileID: 796815804, guid: 23b1fe0762145904ba4ff0b82e7de514, type: 3}
+      propertyPath: fingersToIgnore.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 796815804, guid: 23b1fe0762145904ba4ff0b82e7de514, type: 3}
+      propertyPath: fingersToIgnore.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1106670881, guid: 23b1fe0762145904ba4ff0b82e7de514, type: 3}
       propertyPath: flexHand
       value: 
@@ -12700,7 +12732,7 @@ PrefabInstance:
         type: 3}
       propertyPath: flexInterfaces.Array.data[0]
       value: 
-      objectReference: {fileID: 1788163788}
+      objectReference: {fileID: 1788163792}
     - target: {fileID: 7195348242957399794, guid: 23b1fe0762145904ba4ff0b82e7de514,
         type: 3}
       propertyPath: flexInterfaces.Array.data[1]
@@ -12732,53 +12764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51eb3b5203579b848804c98dd1571c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1788163788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788163783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff700274dab95c4db2b4c071444c45d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sphereFlex: {fileID: 1788163789}
-  pinchFlex: {fileID: 1788163790}
---- !u!114 &1788163789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788163783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c2ece6cd8d708147bd52ae64e1e6070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flexHand: {fileID: 479991096}
-  skeleton: {fileID: 479991099}
-  fingerTipRadius: 0.01
-  poseVolumeRadius: 0.07
-  poseVolumeOffset: {x: 0.07, y: -0.03, z: 0}
-  trackLowConfidenceHands: 0
-  trackLowConfidenceFingers: 0
-  fingersToIgnore: 04000000
-  grabThresoldHand: {x: 0.25, y: 0.75}
---- !u!114 &1788163790 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1106670881, guid: 23b1fe0762145904ba4ff0b82e7de514,
-    type: 3}
-  m_PrefabInstance: {fileID: 1788163781}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788163783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d49bdd7f015ce34ebcef4318edda787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1788163791 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1106670880, guid: 23b1fe0762145904ba4ff0b82e7de514,
@@ -12789,6 +12774,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a4ecd3b02b31374aae9ae1f9041266d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1788163792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 796815803, guid: 23b1fe0762145904ba4ff0b82e7de514,
+    type: 3}
+  m_PrefabInstance: {fileID: 1788163781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788163783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff700274dab95c4db2b4c071444c45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1788163798
