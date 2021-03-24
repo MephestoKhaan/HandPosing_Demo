@@ -3846,92 +3846,6 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!21 &701795817
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: PaperMatLightmapped (Instance) (Instance)
-  m_Shader: {fileID: 4800000, guid: 4ae08b1f21c30854a91d5c0061f22842, type: 3}
-  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _NORMALMAP _SPECGLOSSMAP _SPECULARHIGHLIGHTS_OFF
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _Bump:
-        m_Texture: {fileID: 2800000, guid: 2eba50d4af9445047b89397951e9d735, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 2eba50d4af9445047b89397951e9d735, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailAlbedoMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailMask:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DetailNormalMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _EmissionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 77eed150cbc4ddc45a79ac51d2a565b9, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _OcclusionMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _ParallaxMap:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
-        m_Texture: {fileID: 2800000, guid: 21255b7da426d6648a8be95f0c1f069d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _BumpScale: 1
-    - _Cutoff: 0.5
-    - _DetailNormalMapScale: 1
-    - _DstBlend: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0
-    - _GlossyReflections: 0
-    - _Metallic: 0
-    - _Mode: 0
-    - _OcclusionStrength: 0
-    - _Parallax: 0.02
-    - _Smoothness: 0.108
-    - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 0
-    - _SrcBlend: 1
-    - _UVSec: 0
-    - _ZWrite: 1
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LightmapCoordinates: {r: 0.060410738, g: 0.060410738, b: 0.06288174, a: 0.90377086}
-    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &707209181
 GameObject:
   m_ObjectHideFlags: 0
@@ -9254,7 +9168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7156e422f2a0ee438ac354163634a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackingData: {fileID: 1171957570}
+  trackingData: {fileID: 1171957574}
   renderedHand: {fileID: 283719600}
   okColour: {r: 1, g: 1, b: 1, a: 1}
   warningColour: {r: 1, g: 0, b: 0, a: 1}
@@ -13615,7 +13529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7156e422f2a0ee438ac354163634a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trackingData: {fileID: 479991097}
+  trackingData: {fileID: 479991101}
   renderedHand: {fileID: 431836506}
   okColour: {r: 1, g: 1, b: 1, a: 1}
   warningColour: {r: 1, g: 0, b: 0, a: 1}

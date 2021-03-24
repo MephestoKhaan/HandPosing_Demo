@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PrivacyCheckScene.unity
+    guid: 3f93484ddcc555f4f8815bcc33cea203
+  - enabled: 1
+    path: Assets/Scenes/Warning.unity
+    guid: 7c0e6d9004e246244a6e8dc39507fddf
+  - enabled: 1
     path: Assets/Scenes/PirateShip.unity
     guid: 553fd3db7ea97fd43983526c2dfdc5ce
   m_configObjects:
