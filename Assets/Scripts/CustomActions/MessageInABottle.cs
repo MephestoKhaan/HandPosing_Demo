@@ -14,7 +14,10 @@ public class MessageInABottle : MonoBehaviour
 
     private void Awake()
     {
-        _messageColliders = new List<Collider>(message.GetComponentsInChildren<Collider>());
+        if(message != null)
+        {
+            _messageColliders = new List<Collider>(message.GetComponentsInChildren<Collider>());
+        }
     }
 
     private void OnEnable()
@@ -22,21 +25,28 @@ public class MessageInABottle : MonoBehaviour
         cork.OnDetacched += CorkReleased;
         cork.OnReAttached += CorkAttached;
 
-        message.OnDetacched += MessageReleased;
-        message.OnReAttached += MessageAttached;
+        if(message != null)
+        {
+            message.OnDetacched += MessageReleased;
+            message.OnReAttached += MessageAttached;
+        }
     }
     private void OnDisable()
     {
         cork.OnDetacched -= CorkReleased;
         cork.OnReAttached -= CorkAttached;
 
-        message.OnDetacched -= MessageReleased;
-        message.OnReAttached -= MessageAttached;
+
+        if (message != null)
+        {
+            message.OnDetacched -= MessageReleased;
+            message.OnReAttached -= MessageAttached;
+        }
     }
 
     private void Start()
     {
-        _messageColliders.ForEach(c=>c.enabled = false);
+        _messageColliders?.ForEach(c=>c.enabled = false);
     }
 
 
@@ -54,7 +64,7 @@ public class MessageInABottle : MonoBehaviour
     {
         if(!_messageWasReleased)
         {
-            _messageColliders.ForEach(c => c.enabled = true);
+            _messageColliders?.ForEach(c => c.enabled = true);
         }
     }
 
@@ -62,7 +72,7 @@ public class MessageInABottle : MonoBehaviour
     {
         if (!_messageWasReleased)
         {
-            _messageColliders.ForEach(c => c.enabled = false);
+            _messageColliders?.ForEach(c => c.enabled = false);
         }
     }
 
