@@ -1,5 +1,6 @@
 ﻿using HandPosing.OVRIntegration;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Analytics;
 
@@ -25,6 +26,16 @@ public class GrabberAnalytics : MonoBehaviour
         grabber.OnGrabAttemptFail -= GrabAttemptFail;
     }
 
+    private string SimplifyName(string name)
+    {
+        if(!string.IsNullOrEmpty(name))
+        {
+            name = Regex.Replace(name, @"\s\(\d*\)", "");
+            return name;
+        }
+        return string.Empty;
+    }
+
     private void GrabStarted(GameObject obj)
     {
 #if ANALYTICS_PROD
@@ -32,10 +43,10 @@ public class GrabberAnalytics : MonoBehaviour
         {
             { "handeness", handeness.ToString()},
             { "flex", grabber.Flex?.ToString()},
-            { "grabbable", obj.name}
+            { "grabbable", SimplifyName(obj?.name)}
         });
 #else
-        Debug.Log($"GrabberAnalytics: GrabStarted {obj?.name}");
+        Debug.Log($"GrabberAnalytics: GrabStarted {SimplifyName(obj?.name)}");
 #endif
     }
 
@@ -46,12 +57,12 @@ public class GrabberAnalytics : MonoBehaviour
         {
             { "handeness", handeness.ToString()},
             { "flex", grabber.Flex?.ToString()},
-            { "grabbable", obj?.name},
+            { "grabbable", SimplifyName(obj?.name)},
             { "duration", time.ToString("F1") }
         });
 
 #else
-        Debug.Log($"GrabberAnalytics: GrabEnded {obj?.name}");
+        Debug.Log($"GrabberAnalytics: GrabEnded {SimplifyName(obj?.name)}");
 #endif
     }
 
@@ -62,11 +73,11 @@ public class GrabberAnalytics : MonoBehaviour
         {
             { "handeness", handeness.ToString()},
             { "flex", grabber.Flex?.ToString()},
-            { "grabbable", obj?.name}
+            { "grabbable", SimplifyName(obj?.name)}
         });
 
 #else
-        Debug.Log($"GrabberAnalytics: GrabFailed {obj?.name}");
+        Debug.Log($"GrabberAnalytics: GrabFailed {SimplifyName(obj?.name)}");
 #endif
     }
 
