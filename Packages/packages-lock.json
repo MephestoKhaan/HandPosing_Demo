@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "06eed5805318cd57a35b8c3426b1a8932ca12ac7"
+      "hash": "7b26fdad283ad6bb10390c93e88a1c705a4cf22f"
     },
     "com.unity.analytics": {
       "version": "3.3.5",

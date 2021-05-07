@@ -26,6 +26,7 @@ namespace HandPosing.OVRIntegration.GrabEngine
         [Range(0.0f, 0.1f)]
         private float poseVolumeRadius = 0.07f;
         [SerializeField]
+        [Tooltip("This will differ based on handedness. The right can be (0.07f,-0.03f, 0.0f), while the left can be the inverse (-0.07f, 0.03f, 0.0f).")]
         private Vector3 poseVolumeOffset = new Vector3(0.07f, -0.03f, 0.0f);
         [SerializeField]
         private bool trackLowConfidenceHands = false;
@@ -37,15 +38,6 @@ namespace HandPosing.OVRIntegration.GrabEngine
         [Tooltip("Grab threshold, hand sphere grab")]
         private Vector2 grabThresoldHand = new Vector2(0.25f, 0.75f);
 
-
-        public FlexType InterfaceFlexType
-        {
-            get
-            {
-                return FlexType.SphereGrab;
-            }
-        }
-
         private float? _lastGrabStrength;
 
         private float[] _fingerPoseStrength = new float[FINGER_COUNT];
@@ -53,7 +45,7 @@ namespace HandPosing.OVRIntegration.GrabEngine
         private float[] _pinchStrength = new float[FINGER_COUNT];
         private Vector3[] _fingerTipCenter = new Vector3[FINGER_COUNT];
         private Vector3 _poseVolumeCenter = Vector3.zero;
-        private bool[] _cachedIgnoreFingers;
+        private bool[] _isFingerIgnored;
 
         private const float ALMOST_GRAB_LOWER_PERCENT = 1.7f;
         private const float ALMOST_GRAB_UPPER_PERCENT = 0.9f;
@@ -79,54 +71,40 @@ namespace HandPosing.OVRIntegration.GrabEngine
         };
 
 
-        public bool IsValid
-        {
-            get
-            {
-                return flexHand
-                    && flexHand.IsTracked;
-            }
-        }
-
+        public bool IsValid => flexHand && flexHand.IsDataValid;
 
         public float? GrabStrength
         {
             get => CalculateGrabStrength();
         }
 
-        public Vector2 GrabThresold
+        public Vector2 GrabThreshold
         {
             get => grabThresoldHand;
         }
 
-        public Vector2 FailGrabThresold
+        public Vector2 GrabAttemptThreshold
         {
-            get
-            {
-                Vector2 failThresold = GrabThresold;
-                failThresold.x *= ALMOST_GRAB_LOWER_PERCENT;
-                failThresold.y *= ALMOST_GRAB_UPPER_PERCENT;
-                return failThresold;
-            }
+            get => GrabThreshold * new Vector2(ALMOST_GRAB_LOWER_PERCENT, ALMOST_GRAB_UPPER_PERCENT);
         }
 
         public float AlmostGrabRelease
         {
-            get => GrabThresold.x * ALMOST_GRAB_RELEASE_PERCENT;
+            get => GrabThreshold.x * ALMOST_GRAB_RELEASE_PERCENT;
         }
 
         private bool IsFinderIgnored(int fingerIndex)
         {
-            if(_cachedIgnoreFingers == null)
+            if (_isFingerIgnored == null)
             {
-                _cachedIgnoreFingers = new bool[FINGER_COUNT];
+                _isFingerIgnored = new bool[FINGER_COUNT];
                 for (int i = 0; i < FINGER_COUNT; ++i)
                 {
-                    _cachedIgnoreFingers[i] = fingersToIgnore.Contains(HAND_FINGERS[i]);
+                    _isFingerIgnored[i] = fingersToIgnore.Contains(HAND_FINGERS[i]);
                 }
             }
 
-            return _cachedIgnoreFingers[fingerIndex];
+            return _isFingerIgnored[fingerIndex];
         }
 
         private float? CalculateGrabStrength()
@@ -146,40 +124,22 @@ namespace HandPosing.OVRIntegration.GrabEngine
                 _lastGrabStrength = StorePerFingerGrabAndGetFinalValue();
             }
 
-
-
             return _lastGrabStrength;
         }
 
         private bool CanTrackHand()
         {
-            if (flexHand == null
-                || !flexHand.IsDataValid
-                || (!flexHand.IsDataHighConfidence && !trackLowConfidenceHands))
-            {
-                return false;
-            }
-            return true;
+            return flexHand.IsDataHighConfidence || trackLowConfidenceHands;
         }
 
-        private bool CanTrackFinger(int fingerIndex)
-        {
-            OVRHand.HandFinger finger = HAND_FINGERS[fingerIndex];
-
-            if (flexHand == null
-                || !flexHand.IsDataValid
-                || (flexHand.GetFingerConfidence(finger) != OVRHand.TrackingConfidence.High && !trackLowConfidenceFingers))
-            {
-                return false;
-            }
-            return true;
-        }
-
+        /// <summary>
+        /// Updates the position of the finger tips, for later comparison with the Hand Centre
+        /// </summary>
         private void UpdateFingerTips()
         {
             for (int i = 0; i < FINGER_COUNT; ++i)
             {
-                if (!CanTrackFinger(i))
+                if (!CanTrackFinger(HAND_FINGERS[i]))
                 {
                     continue;
                 }
@@ -188,29 +148,46 @@ namespace HandPosing.OVRIntegration.GrabEngine
                 OVRBone fingerTip = skeleton.Bones[(int)tipId];
                 _fingerTipCenter[i] = fingerTip.Transform.position;
             }
-
         }
 
+        private bool CanTrackFinger(OVRHand.HandFinger finger)
+        {
+            return (flexHand.GetFingerConfidence(finger) == OVRHand.TrackingConfidence.High || trackLowConfidenceFingers);
+        }
+
+        /// <summary>
+        /// Updates the position of the Hand Centre. It is important to visualise that the offset is correct when editing it.
+        /// </summary>
         private void UpdateVolumeCenter()
         {
             OVRBone baseBone = skeleton.Bones[(int)OVRSkeleton.BoneId.Hand_Start];
             _poseVolumeCenter = baseBone.Transform.position + baseBone.Transform.TransformDirection(poseVolumeOffset);
         }
 
+        /// <summary>
+        /// To calculate the pinch strength we must check not only the confidence of each finger but also the thumb.
+        /// After that we ony update the values if the tracking was good enough (controllable in the inspector)
+        /// </summary>
         private void CalculatePinchStrength()
         {
+            bool canTrackThumb = CanTrackFinger(OVRHand.HandFinger.Thumb);
+            if(!canTrackThumb)
+            {
+                return;
+            }
             for (int i = 0; i < FINGER_COUNT; ++i)
             {
-                if (!CanTrackFinger(i))
+                if (CanTrackFinger(HAND_FINGERS[i]))
                 {
-                    continue;
+                    var fingerId = HAND_FINGERS[i];
+                    _pinchStrength[i] = flexHand.GetFingerPinchStrength(fingerId);
                 }
-
-                var fingerId = HAND_FINGERS[i];
-                _pinchStrength[i] = flexHand.GetFingerPinchStrength(fingerId);
             }
         }
 
+        /// <summary>
+        /// To calculate the sphere grab strenght we check that the finger tips are close enough to the palm centre with some hysteresis specified vy the radious.
+        /// </summary>
         private void CalculatePoseStrength()
         {
             float outsidePoseVolumeRadius = poseVolumeRadius + fingerTipRadius;
@@ -238,16 +215,22 @@ namespace HandPosing.OVRIntegration.GrabEngine
             }
         }
 
+        /// <summary>
+        /// Once all positions and distances are calculated, proceeds to update the final value.
+        /// For each finger the grab value is the max between the pinch and the palm distance
+        /// Then, taking in count that fingers can be ignored, finds the minimal value (all fingers must be grabbing).
+        /// It also populates the grab strength collection with all the relevant values.
+        /// </summary>
+        /// <returns>The safest grab value for the hand</returns>
         private float StorePerFingerGrabAndGetFinalValue()
         {
-            // start with pose strength at first
             for (int i = 0; i < _fingerGrabStrength.Length; ++i)
             {
                 _fingerGrabStrength[i] = _fingerPoseStrength[i];
             }
 
             // Calculate finger grab strength while taking pinch into account
-            float minGrabStrength = float.MaxValue;
+            float? minGrabStrength = null;
             for (int i = 0; i < FINGER_COUNT; ++i)
             {
                 var grabStrength = Mathf.Max(_pinchStrength[i], _fingerGrabStrength[i]);
@@ -257,13 +240,14 @@ namespace HandPosing.OVRIntegration.GrabEngine
                 {
                     continue;
                 }
-                if (minGrabStrength > grabStrength)
+                if (!minGrabStrength.HasValue 
+                    || minGrabStrength > grabStrength)
                 {
                     minGrabStrength = grabStrength;
                 }
             }
 
-            return minGrabStrength;
+            return minGrabStrength ?? 0f;
         }
     }
 }

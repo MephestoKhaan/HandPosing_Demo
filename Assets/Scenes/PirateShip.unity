@@ -8278,10 +8278,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1054686201, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
-      propertyPath: grabThresold.y
-      value: 0.95
-      objectReference: {fileID: 0}
     - target: {fileID: 1054686202, guid: 886cb81ddb5a38541bfc87cbb5fabfd5, type: 3}
       propertyPath: flexHand
       value: 
