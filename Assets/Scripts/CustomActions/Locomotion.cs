@@ -9,6 +9,8 @@ public class Locomotion : MonoBehaviour
     private float snapDegrees = 45f;
     [SerializeField]
     private float deathZone = 0.1f;
+    [SerializeField]
+    private bool lockVerticalMove = true;
 
     [SerializeField]
     private Transform leftDirectioner;
@@ -25,7 +27,7 @@ public class Locomotion : MonoBehaviour
 
     void Update()
     {
-        if(!UpdateMove(leftDirectioner, OVRInput.Controller.LTouch))
+        if (!UpdateMove(leftDirectioner, OVRInput.Controller.LTouch))
         {
             UpdateMove(rightDirectioner, OVRInput.Controller.RTouch);
         }
@@ -41,9 +43,15 @@ public class Locomotion : MonoBehaviour
             Vector3 offset = new Vector3(move.x, 0f, move.y) * Time.deltaTime * moveSpeed;
             Vector3 targetPosition = this.transform.position
                 + direction * offset;
+
             if (NavMesh.SamplePosition(targetPosition, out NavMeshHit hit, 0.5f, _navLayer))
             {
-                this.transform.position = hit.position;
+                Vector3 pos = hit.position;
+                if(lockVerticalMove)
+                {
+                    pos.y = this.transform.position.y;
+                }
+                this.transform.position = pos;
                 return true;
             }
         }
@@ -54,12 +62,12 @@ public class Locomotion : MonoBehaviour
     {
         float rot = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.RTouch).x;
         bool canSnap = Mathf.Abs(rot) > 0.75f;
-        
+
         if (!canSnap)
         {
             _snapped = false;
         }
-        else if(!_snapped
+        else if (!_snapped
             && canSnap)
         {
             _snapped = true;
