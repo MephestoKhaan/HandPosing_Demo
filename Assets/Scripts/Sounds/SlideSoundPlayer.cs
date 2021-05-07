@@ -1,12 +1,12 @@
-﻿using UnityEngine;
+﻿    using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class SlideSoundPlayer : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 minMaxPitch;
+    private AnimationCurve pitchCurve;
     [SerializeField]
-    private float maxVolume;
+    private AnimationCurve volumeCurve;
     [SerializeField]
     private float velocityThresold = 0.5f;
     [SerializeField]
@@ -15,9 +15,7 @@ public class SlideSoundPlayer : MonoBehaviour
     private float dampness = 10f;
 
     private AudioSource _audioSource;
-
     private bool _isPlaying = false;
-
     private Vector3 _lastPosition;
 
     private void Awake()
@@ -49,10 +47,10 @@ public class SlideSoundPlayer : MonoBehaviour
         if (_isPlaying)
         {
             velocity *= velocityFactor;
-            float desiredVolume = Mathf.Lerp(0f, maxVolume, velocity);
+            float desiredVolume = volumeCurve.Evaluate(velocity);
             _audioSource.volume = Mathf.Lerp(_audioSource.volume, desiredVolume, dampness * Time.deltaTime);
 
-            float desiredPitch = Mathf.Lerp(minMaxPitch.x, minMaxPitch.y, velocity);
+            float desiredPitch = pitchCurve.Evaluate(velocity);
             _audioSource.pitch = Mathf.Lerp(_audioSource.pitch, desiredPitch, dampness * Time.deltaTime);
         }
 
