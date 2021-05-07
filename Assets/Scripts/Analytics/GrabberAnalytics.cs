@@ -31,7 +31,7 @@ public class GrabberAnalytics : MonoBehaviour
         Analytics.CustomEvent("GrabStarted", new Dictionary<string, object>
         {
             { "handeness", handeness.ToString()},
-            { "flex", grabber.Flex?.InterfaceFlexType.ToString()},
+            { "flex", grabber.Flex.ToString()},
             { "grabbable", obj.name}
         });
 #else
