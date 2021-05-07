@@ -31,7 +31,7 @@ public class GrabberAnalytics : MonoBehaviour
         Analytics.CustomEvent("GrabStarted", new Dictionary<string, object>
         {
             { "handeness", handeness.ToString()},
-            { "flex", grabber.Flex.ToString()},
+            { "flex", grabber.Flex?.ToString()},
             { "grabbable", obj.name}
         });
 #else
@@ -45,7 +45,7 @@ public class GrabberAnalytics : MonoBehaviour
         Analytics.CustomEvent("GrabEnded", new Dictionary<string, object>
         {
             { "handeness", handeness.ToString()},
-            { "flex", grabber.Flex?.InterfaceFlexType.ToString()},
+            { "flex", grabber.Flex?.ToString()},
             { "grabbable", obj?.name},
             { "duration", time.ToString("F1") }
         });
@@ -61,7 +61,7 @@ public class GrabberAnalytics : MonoBehaviour
         Analytics.CustomEvent("GrabFailed", new Dictionary<string, object>
         {
             { "handeness", handeness.ToString()},
-            { "flex", grabber.Flex?.InterfaceFlexType.ToString()},
+            { "flex", grabber.Flex?.ToString()},
             { "grabbable", obj?.name}
         });
 
