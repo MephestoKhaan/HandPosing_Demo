@@ -187,7 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 3484241640537872161}
-  snapsBack: 1
+  snapMode: 1
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -289,7 +290,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 1536342393625196981}
-  snapsBack: 0
+  snapMode: 0
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -391,7 +393,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 3484241640537872161}
-  snapsBack: 1
+  snapMode: 1
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -493,7 +496,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 1536342393625196981}
-  snapsBack: 0
+  snapMode: 0
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -756,7 +760,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.011311839, y: 0.09550103, z: -0.000000014901161}
+  m_ConnectedAnchor: {x: -0.011311808, y: 0.09550098, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 0, z: 1}
   m_XMotion: 0

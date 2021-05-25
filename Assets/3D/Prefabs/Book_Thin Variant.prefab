@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 6731184532474765238}
-  snapsBack: 1
+  snapMode: 1
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -166,7 +167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 6731184532474765238}
-  snapsBack: 1
+  snapMode: 1
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -464,7 +466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 6731184532474765238}
-  snapsBack: 1
+  snapMode: 1
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -585,7 +588,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 6731184532474765238}
-  snapsBack: 1
+  snapMode: 1
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -726,7 +730,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c5d66e50975d1ad45b1fcbeff7019e88,
         type: 3}
       propertyPath: m_Name
-      value: Book_Thin
+      value: Book_Thin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c5d66e50975d1ad45b1fcbeff7019e88,
         type: 3}

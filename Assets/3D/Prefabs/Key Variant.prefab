@@ -270,7 +270,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 3211760154182217759}
-  snapsBack: 1
+  snapMode: 1
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -372,7 +373,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   relativeTo: {fileID: 3211760154182217759}
-  snapsBack: 1
+  snapMode: 1
+  canBeDistantGrabbed: 0
   slideThresold: 0
   pose:
     relativeGrip:
@@ -495,7 +497,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3a1b72d06c1cea64eaab7963ec416b8f,
         type: 3}
       propertyPath: m_Name
-      value: Key
+      value: Key Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3a1b72d06c1cea64eaab7963ec416b8f,
         type: 3}
