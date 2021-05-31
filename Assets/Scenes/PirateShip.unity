@@ -18525,6 +18525,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4791985147996308336, guid: a10b6320b17725243925c5dc3e9c7cbc,
+        type: 3}
+      propertyPath: snapMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954878521589175719, guid: a10b6320b17725243925c5dc3e9c7cbc,
+        type: 3}
+      propertyPath: snapMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8029913552749538265, guid: a10b6320b17725243925c5dc3e9c7cbc,
         type: 3}
       propertyPath: m_IsActive
