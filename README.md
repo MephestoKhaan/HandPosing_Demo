@@ -3,7 +3,7 @@
 Full Unity Project:
 A Pirate demo for the HandPosing tool, for Oculus Quest. Compatible with HandTracking and Controllers. 
 
-Download and play the game using [SideQuest](https://sidequestvr.com/app/2278/hand-posing-tool-pirates-demo).
+Download and play the game using [AppLab](https://www.oculus.com/experiences/quest/3812713968786936/?utm_source=sidequest) or [SideQuest](https://sidequestvr.com/app/2278/hand-posing-tool-pirates-demo).
 
 ![image](https://user-images.githubusercontent.com/4976810/105975984-e85e0e00-608f-11eb-8f9f-8cccb3f22de6.png)
 
