@@ -7853,7 +7853,7 @@ PrefabInstance:
     - target: {fileID: 2257150114218329589, guid: 7b8c060b61ac4714088e92a5a75a3658,
         type: 3}
       propertyPath: whisperVolumeDecay
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 2257150114218329589, guid: 7b8c060b61ac4714088e92a5a75a3658,
         type: 3}
