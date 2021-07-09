@@ -23,6 +23,17 @@ public class StaffLocomotion : Grabbable
     [Header("Movement")]
     [SerializeField]
     private float movementSpeed = 2f;
+    [Header("Sound")]
+    [SerializeField]
+    private AudioSource hitSound;
+    [SerializeField]
+    private float hitPitchRange = 0.1f;
+    [SerializeField]
+    private AudioSource whispersSound;
+    [SerializeField]
+    private AnimationCurve penetrationWhisperVolume;
+    [SerializeField]
+    private float whisperVolumeDecay = 0.1f;
 
     private bool _ringEnabled = true;
     private Renderer _ringRenderer;
@@ -32,13 +43,14 @@ public class StaffLocomotion : Grabbable
     private int _glowID;
     private Color _glowColor;
 
-
     private Vector3? _lastGrabPosition;
     private Transform _grabber;
     private Pose _handToStaff;
     private float _grabAltitude;
     private float _previousPenetration;
     private int _navLayer;
+
+    private bool _hitPlayed;
 
     protected override void Awake()
     {
@@ -110,63 +122,94 @@ public class StaffLocomotion : Grabbable
                 }
             }
         }
-        
-        if(freeMovement)
+
+        if (freeMovement)
         {
             this.transform.rotation = desiredRot;
             this.transform.position = desiredPos;
             _lastGrabPosition = null;
+            _hitPlayed = false;
         }
-
-            if (penetration != _previousPenetration)
-            {
-                _previousPenetration = penetration;
-                UpdateRing(penetration);
-                HighlightStaff(penetration);
-            }
-        }
-
-        private void LateUpdate()
+        else if (!_hitPlayed)
         {
-            if (_previousPenetration > 0f)
-            {
-                ring.rotation = _ringOrientation;
-            }
+            _hitPlayed = true;
+            hitSound.pitch = Random.Range(1f - hitPitchRange, 1f + hitPitchRange);
+            hitSound.Play();
         }
 
-        private void MovePlayer(Vector3 delta)
+        if (penetration != _previousPenetration)
         {
-            delta.y = 0f;
-
-            Vector3 bodyDir = Vector3.ProjectOnPlane(head.transform.forward, Vector3.up).normalized;
-            bool movingForward = Vector3.Dot(delta, bodyDir) > 0f;
-            if (movingForward)
-            {
-                Vector3 movement = Vector3.Project(delta, bodyDir);
-                player.Translate(movement);
-            }
-        }
-
-        private void HighlightStaff(float penetration)
-        {
-            _glowColor.r = _glowColor.g = _glowColor.b = penetrationStaffGlow.Evaluate(penetration);
-            _staffMaterial.SetColor(_glowID, _glowColor);
-        }
-
-        private void UpdateRing(float penetration)
-        {
-            if (penetration <= 0f && _ringEnabled)
-            {
-                _ringRenderer.enabled = _ringEnabled = false;
-            }
-
-            else if (penetration > 0f)
-            {
-                if (!_ringEnabled)
-                {
-                    _ringRenderer.enabled = _ringEnabled = true;
-                }
-                ring.localScale = penetrationRingSize.Evaluate(penetration) * Vector3.one;
-            }
+            _previousPenetration = penetration;
+            UpdateRing(penetration);
+            HighlightStaff(penetration);
+            UpdateWhispers(penetration);
         }
     }
+
+    private void LateUpdate()
+    {
+        if (_previousPenetration > 0f)
+        {
+            ring.rotation = _ringOrientation;
+        }
+    }
+
+    private void MovePlayer(Vector3 delta)
+    {
+        delta.y = 0f;
+
+        Vector3 bodyDir = Vector3.ProjectOnPlane(head.transform.forward, Vector3.up).normalized;
+        bool movingForward = Vector3.Dot(delta, bodyDir) > 0f;
+        if (movingForward)
+        {
+            Vector3 movement = Vector3.Project(delta, bodyDir);
+            player.Translate(movement);
+        }
+    }
+
+    private void HighlightStaff(float penetration)
+    {
+        _glowColor.r = _glowColor.g = _glowColor.b = penetrationStaffGlow.Evaluate(penetration);
+        _staffMaterial.SetColor(_glowID, _glowColor);
+    }
+
+    private void UpdateRing(float penetration)
+    {
+        if (penetration <= 0f && _ringEnabled)
+        {
+            _ringRenderer.enabled = _ringEnabled = false;
+        }
+
+        else if (penetration > 0f)
+        {
+            if (!_ringEnabled)
+            {
+                _ringRenderer.enabled = _ringEnabled = true;
+            }
+            ring.localScale = penetrationRingSize.Evaluate(penetration) * Vector3.one;
+        }
+    }
+
+    private void UpdateWhispers(float penetration)
+    {
+        if (penetration <= 0f)
+        {
+            if (whispersSound.isPlaying)
+            {
+                whispersSound.volume -= Time.deltaTime * whisperVolumeDecay;
+                if(whispersSound.volume <= 0f)
+                {
+                    whispersSound.Pause();
+                }
+            }
+        }
+        else
+        {
+            if (!whispersSound.isPlaying)
+            {
+                whispersSound.Play();
+            }
+            whispersSound.volume = Mathf.Max(whispersSound.volume, penetrationWhisperVolume.Evaluate(penetration));
+        }
+    }
+}
