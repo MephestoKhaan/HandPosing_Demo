@@ -1,4 +1,5 @@
-﻿using HandPosing.Interaction;
+﻿using HandPosing;
+using HandPosing.Interaction;
 using UnityEngine;
 
 public class StaffLocomotion : Grabbable
@@ -8,34 +9,84 @@ public class StaffLocomotion : Grabbable
     private Transform player;
     [SerializeField]
     private Transform head;
+    [Header("Ring")]
+    [SerializeField]
+    private Renderer staff;
+    [SerializeField]
+    private AnimationCurve penetrationStaffGlow;
+    [Header("Staff")]
+    [SerializeField]
+    private Transform ring;
+    [SerializeField]
+    private AnimationCurve penetrationRingSize;
+    [Header("Movement")]
     [SerializeField]
     private float movementSpeed = 2f;
+
+    private bool _ringEnabled = true;
+    private Renderer _ringRenderer;
+    private Quaternion _ringOrientation;
+
+    private Material _staffMaterial;
+    private int _glowID;
+    private Color _glowColor;
 
 
     private Vector3? _lastGrabPosition;
     private Transform _grabber;
+    private Pose _handToStaff;
+    private float _grabAltitude;
+    private float _previousPenetration;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        _ringRenderer = ring.GetComponent<Renderer>();
+        _ringOrientation = ring.rotation;
+
+        _staffMaterial = staff.material;
+        _glowID = Shader.PropertyToID("_EmissionColor");
+    }
+
+    private void Start()
+    {
+        HighlightStaff(0f);
+        UpdateRing(0f);
+    }
 
     public override void GrabBegin(BaseGrabber hand)
     {
-        base.GrabBegin(hand);
         _grabber = hand.transform;
+        Vector3 projectedHand = Vector3.Project(_grabber.position - this.transform.position, Vector3.up);
+        Pose grabPoint = new Pose(this.transform.position + projectedHand, Quaternion.identity);
+        _handToStaff = _grabber.RelativeOffset(grabPoint);
+        _grabAltitude = projectedHand.magnitude;
+
+        base.GrabBegin(hand);
     }
 
     public override void GrabEnd(BaseGrabber hand, Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        base.GrabEnd(hand, linearVelocity, angularVelocity);
         _grabber = null;
+        base.GrabEnd(hand, linearVelocity, angularVelocity);
     }
 
     public override void MoveTo(Vector3 desiredPos, Quaternion desiredRot)
     {
+        desiredPos = PoseUtils.Multiply(_grabber.GetPose(), _handToStaff).position - Vector3.up * _grabAltitude;
+        desiredRot = Quaternion.LookRotation(Vector3.ProjectOnPlane(desiredRot * Vector3.forward, Vector3.up).normalized, Vector3.up);
+
+        float penetration = 0f;
         if (desiredPos.y < 0f)
         {
+            penetration = Mathf.Abs(desiredPos.y);
             Vector3 stuckPos = this.transform.position;
             stuckPos.y = 0f;
             this.transform.position = stuckPos;
 
-            if(_grabber != null)
+
+            if (_grabber != null)
             {
                 if (_lastGrabPosition.HasValue)
                 {
@@ -55,19 +106,56 @@ public class StaffLocomotion : Grabbable
             this.transform.position = desiredPos;
             _lastGrabPosition = null;
         }
+
+        if(penetration != _previousPenetration)
+        {
+            _previousPenetration = penetration;
+            UpdateRing(penetration);
+            HighlightStaff(penetration);
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if(_previousPenetration > 0f)
+        {
+            ring.rotation = _ringOrientation;
+        }
     }
 
     private void MovePlayer(Vector3 delta)
     {
         delta.y = 0f;
-        Vector3 headDir = Vector3.ProjectOnPlane(head.forward, Vector3.up).normalized;
 
-        bool movingForward = Vector3.Dot(delta, headDir) > 0f;
+        Vector3 bodyDir = Vector3.ProjectOnPlane(head.transform.forward, Vector3.up).normalized;
+        bool movingForward = Vector3.Dot(delta, bodyDir) > 0f;
         if (movingForward)
         {
-            Vector3 movement = Vector3.Project(delta, headDir);
+            Vector3 movement = Vector3.Project(delta, bodyDir);
             player.Translate(movement);
         }
     }
 
+    private void HighlightStaff(float penetration)
+    {
+        _glowColor.r = _glowColor.g = _glowColor.b = penetrationStaffGlow.Evaluate(penetration);
+        _staffMaterial.SetColor(_glowID, _glowColor);
+    }
+
+    private void UpdateRing(float penetration)
+    {
+        if (penetration <= 0f && _ringEnabled)
+        {
+            _ringRenderer.enabled = _ringEnabled = false;
+        }
+
+        else if (penetration > 0f)
+        {
+            if (!_ringEnabled)
+            {
+                _ringRenderer.enabled = _ringEnabled = true;
+            }
+            ring.localScale = penetrationRingSize.Evaluate(penetration) * Vector3.one;
+        }
+    }
 }
