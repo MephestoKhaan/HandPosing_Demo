@@ -86,6 +86,10 @@ public class StaffLocomotion : Grabbable
     {
         _grabber = null;
         base.GrabEnd(hand, linearVelocity, angularVelocity);
+
+        UpdateRing(0f);
+        HighlightStaff(0f);
+        UpdateWhispers(0f);
     }
 
     public override void MoveTo(Vector3 desiredPos, Quaternion desiredRot)
@@ -142,8 +146,8 @@ public class StaffLocomotion : Grabbable
             _previousPenetration = penetration;
             UpdateRing(penetration);
             HighlightStaff(penetration);
-            UpdateWhispers(penetration);
         }
+        UpdateWhispers(penetration);
     }
 
     private void LateUpdate()
@@ -196,8 +200,8 @@ public class StaffLocomotion : Grabbable
         {
             if (whispersSound.isPlaying)
             {
-                whispersSound.volume -= Time.deltaTime * whisperVolumeDecay;
-                if(whispersSound.volume <= 0f)
+                whispersSound.volume = whispersSound.volume - Time.deltaTime * whisperVolumeDecay;
+                if (whispersSound.volume <= 0.01f)
                 {
                     whispersSound.Pause();
                 }
