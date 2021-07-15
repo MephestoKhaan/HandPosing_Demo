@@ -3,6 +3,7 @@ using HandPosing.Interaction;
 using UnityEngine;
 using UnityEngine.AI;
 
+[DefaultExecutionOrder(-100)]
 public class StaffLocomotion : Grabbable
 {
     [Space]
@@ -51,6 +52,8 @@ public class StaffLocomotion : Grabbable
     private int _navLayer;
 
     private bool _hitPlayed;
+    private Vector3? _moveDelta;
+    private float _previousMovementMagnitude;
 
     protected override void Awake()
     {
@@ -73,23 +76,27 @@ public class StaffLocomotion : Grabbable
 
     public override void GrabBegin(BaseGrabber hand)
     {
+        base.GrabBegin(hand);
+
         _grabber = hand.transform;
         Vector3 projectedHand = Vector3.Project(_grabber.position - this.transform.position, Vector3.up);
         Pose grabPoint = new Pose(this.transform.position + projectedHand, Quaternion.identity);
         _handToStaff = _grabber.RelativeOffset(grabPoint);
         _grabAltitude = projectedHand.magnitude;
 
-        base.GrabBegin(hand);
     }
 
     public override void GrabEnd(BaseGrabber hand, Vector3 linearVelocity, Vector3 angularVelocity)
     {
-        _grabber = null;
         base.GrabEnd(hand, linearVelocity, angularVelocity);
 
-        UpdateRing(0f);
-        HighlightStaff(0f);
-        UpdateWhispers(0f);
+        if (_grabber == hand.transform)
+        {
+            _grabber = null;
+            _previousPenetration = 0f;
+            UpdateRing(0f);
+            HighlightStaff(0f);
+        }
     }
 
     public override void MoveTo(Vector3 desiredPos, Quaternion desiredRot)
@@ -101,6 +108,7 @@ public class StaffLocomotion : Grabbable
         bool freeMovement = true;
         Vector3 hitQueryPoint = desiredPos;
         hitQueryPoint.y = 0f;
+
         if (NavMesh.SamplePosition(hitQueryPoint, out NavMeshHit hit, 0.1f, _navLayer))
         {
             if (desiredPos.y < hit.position.y)
@@ -117,10 +125,11 @@ public class StaffLocomotion : Grabbable
                     {
                         Vector3 delta = _lastGrabPosition.Value - _grabber.position;
                         _lastGrabPosition = _grabber.position;
-                        MovePlayer(delta * movementSpeed);
+                        _moveDelta = delta;
                     }
                     else
                     {
+                        _previousMovementMagnitude = 0f;
                         _lastGrabPosition = _grabber.position;
                     }
                 }
@@ -147,7 +156,18 @@ public class StaffLocomotion : Grabbable
             UpdateRing(penetration);
             HighlightStaff(penetration);
         }
-        UpdateWhispers(penetration);
+    }
+
+
+    private void Update()
+    {
+        if (_moveDelta.HasValue)
+        {
+            float movementMagnitude = _moveDelta.Value.magnitude;
+            _previousMovementMagnitude = Mathf.Lerp(_previousMovementMagnitude, movementMagnitude, 1f * Time.deltaTime);
+            MovePlayer(_moveDelta.Value.normalized * movementMagnitude * movementSpeed * Time.deltaTime);
+            _moveDelta = null;
+        }
     }
 
     private void LateUpdate()
@@ -156,6 +176,7 @@ public class StaffLocomotion : Grabbable
         {
             ring.rotation = _ringOrientation;
         }
+        UpdateWhispers(_previousPenetration);
     }
 
     private void MovePlayer(Vector3 delta)

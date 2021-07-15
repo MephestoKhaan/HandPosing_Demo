@@ -7847,6 +7847,11 @@ PrefabInstance:
       objectReference: {fileID: 1568016501}
     - target: {fileID: 2257150114218329589, guid: 7b8c060b61ac4714088e92a5a75a3658,
         type: 3}
+      propertyPath: movementSpeed
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 2257150114218329589, guid: 7b8c060b61ac4714088e92a5a75a3658,
+        type: 3}
       propertyPath: whispersSound
       value: 
       objectReference: {fileID: 1923682017}
@@ -15326,7 +15331,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.1
+  MinDistance: 0.0677129
   MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
